@@ -121,35 +121,22 @@ img {
 //COLORS
 
 @white: #ffffff;
-@lt-grey: #f5f5f5;
-@grey: #b4b4b4;
-@dk-grey: #898989;
-@dkst-grey: #5a5a5a;
-@grey-black: #363636;
+@grey: #5B5D58;
 @black: #000000;
 
-
-@lt-green: #bbdc7b;
-@green: #8dc63f;
-@dk-green: #76a637;
-@dkst-green: #5e752a;
-
-@aqua: #168065;
-@red: #950f13;
-@yellow: #ffd700;
+@lt-purple: #9AA5E8;
+@purple: #7079CE;
 
 //FONTS
 
-@import url(http://fonts.googleapis.com/css?family=Titillium+Web:400,300,300italic,400italic,700,700italic);
-.titillium(@weight:400){//400,300,700
-  font-family: 'Titillium Web', sans-serif;
+@import url(http://fonts.googleapis.com/css?family=Fjalla+One);
+.fjalla(@weight:300){//300
+  font-family: 'Fjalla One', sans-serif;
   font-weight: @weight;
 }
 
-@import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
-.oswald(@weight: 400){//400,300,700
-  font-family: 'Oswald', sans-serif;
-  font-weight: @weight;
+.dk-bg{
+  background: transparent url("../images/dk-bg.png") repeat;
 }
 
 //BASE
@@ -159,11 +146,12 @@ html, body {
   margin: 0;
   padding: 0;
   font-size: 100%;
+  background: @black;
 }
 
 body{
-  .titillium(400);
-  color: @grey-black;
+  .fjalla();
+  color: @grey;
   .font-size();
 }
 
@@ -178,7 +166,7 @@ strong {
 }
 
 a {
-  color: @green;
+  color: @purple;
 
   img {
       border: 0;
@@ -186,7 +174,7 @@ a {
 
   &:hover, &:focus{
     text-decoration: none;
-    color: @dk-green;
+    color: @lt-purple;
   }
 }
 
@@ -235,64 +223,15 @@ input, select, textarea {
   -webkit-box-sizing: border-box;
 }
 
-//SHARED VALIDATION
-
-.wpcf7-not-valid-tip, .wpcf7-response-output.wpcf7-display-none.wpcf7-mail-sent-ng, .failure-msg{
-  width: auto !important;
-  top: -35% !important;
-  left: 30% !important;
-  color: @white;
-  background: @red !important;
-  font-weight: bold;
-  padding: .25em !important;
-  border: none !important;
-  .border-radius(3px);
-}
-
-.wpcf7-response-output{
-  margin: -1.5em auto 1em !important;
-}
-
-.wpcf7-response-output.wpcf7-display-none.wpcf7-validation-errors{
-  color: @black;
-  background: @yellow;
-  font-weight: bold;
-  border: none;
-  margin-left: 0;
-  padding: 1em;
-  .border-radius(3px);
-}
-
-.wpcf7-response-output.wpcf7-display-none.wpcf7-mail-sent-ok, .success-msg{
-  color: @white;
-  background: @aqua;
-  font-weight: bold;
-  border: none;
-  margin-left: 0;
-  padding: 1em;
-  .border-radius(3px);
-}
-
-.ajax-loader{
-  display: block !important;
-  margin: 1.5em auto 0 !important;
-  background: @white;
-  .border-radius(20px);
-}
-
-.form-label{
-  display: none;
-}
-
 //SELECTION
 
 ::selection {
-  background: @green;
+  background: @lt-purple;
   color: @white;
   text-shadow: none;
 }
 ::-moz-selection {
-  background: @green;
+  background: @lt-purple;
   color: @white;
   text-shadow: none;
 }

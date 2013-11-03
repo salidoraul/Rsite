@@ -1,5 +1,7 @@
 var rmp;
 
+
+
 /* --------------------------------------------------- *\
   SHARED FUNCTIONS
 \* --------------------------------------------------- */
@@ -104,6 +106,14 @@ $(function(){
     window.base_url = $('meta[name="base-url"]').attr('content');
     window.body = $('body');
     window.win_width = $(window).width();
+
+    //HOME-------->
+    if(window.body.hasClass('home')){
+
+        $('header .tip-btn').click(function(){
+
+        });
+    }
 
 
 });

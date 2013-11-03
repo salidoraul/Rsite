@@ -10,7 +10,7 @@ endif;
 $slug = the_slug();
 
 //REMOVE AUTOP - PAGES & POSTS
-$autoP = get_pods_field('page','auto_p') ? get_pods_field('page','auto_p') : get_pods_field('post','post_auto_p');
+$autoP = get_pods_field('page','pages_auto_p');
 if($autoP == 0){
     remove_filter('the_content', 'wpautop');
 }
@@ -60,8 +60,7 @@ $x_browser_classes = html_classes( $browser->getBrowser(),$browser->getPlatform(
     <!--// STYLESHEETS ////////////-->
 
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/jquery.kwicks.min.css" />
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/isotope.css" />
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/component.css" />
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/styles.css" />
 
     <?php wp_head(); ?>
@@ -74,3 +73,50 @@ $x_browser_classes = html_classes( $browser->getBrowser(),$browser->getPlatform(
 </head>
 
 <body <?php body_class($slug); ?>>
+
+<div id="st-container" class="st-container">
+
+    <div class="st-pusher">
+
+        <!-- OFF-CANVAS NAV -->
+        <nav class="st-menu st-effect-6" id="menu-6">
+            <?php wp_nav_menu( array( 'menu' => 'Main' ) ); ?>
+        </nav>
+
+        <div class="st-content">
+            <div class="st-content-inner">
+
+                <!--HEADER-->
+                <header class="main-header clearfix">
+                    <div class="left-header">
+                        <img class="header-logo" src="<?php bloginfo('template_url'); ?>/images/rmp-sun.png" alt="RMP"/>
+                        <div id="st-trigger-effects" class="column nav-btn">
+                            <div id="menu-btn" data-effect="st-effect-6">
+                                <div class="menu-icon">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="menu-title">Menu</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-header">
+                        <?php
+                            $contact_email = get_option('company_information_contact_email');
+                            $contact_phone = get_option('company_information_contact_phone');
+                        ?>
+                        <div class="email-section header-contact">
+                            <a href="#" data-toggle="tooltip" title="<a href='mailto:<?= $contact_email ?>'><?= $contact_email ?></a>" class="tip-btn">
+                                <img src="<?php bloginfo('template_url'); ?>/images/mail-icon.png">
+                            </a>
+                        </div>
+                        <div class="phone-section header-contact">
+                            <a href="#" data-toggle="tooltip" title="<a href='<?= $contact_phone ?>' class='phone-link'><?= $contact_phone ?></a>" class="tip-btn">
+                                <img src="<?php bloginfo('template_url'); ?>/images/phone-icon.png">
+                            </a>
+                        </div>
+                    </div>
+                </header>
+
+                <!--MAIN-->
