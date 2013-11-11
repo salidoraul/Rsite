@@ -22,6 +22,14 @@ function getQueryStrings(){
     return vars;
 }
 
+//EXPAND PANEL /////////////////////
+function queryStringPanel(queryString){
+    var panelSelector = getQueryStrings()[queryString];
+    setTimeout(function(){
+        $('.panel a.accordion-toggle.'+ panelSelector).trigger('click');
+    },500);
+}
+
 //ANIMATED SCROLL
 /////////////////////////////////////
 function animatedScroll(topPosition){
@@ -107,12 +115,52 @@ $(function(){
     window.body = $('body');
     window.win_width = $(window).width();
 
+    //VIDEO BG
+    var BV = new $.BigVideo({useFlashForFirefox:false});
+    BV.init();
+    if (Modernizr.touch) {
+        BV.show('http://www.randymurrayproductions.com/RMP-wordpress/wp-content/themes/RMP/video/poster.jpg');
+    } else{
+        BV.show('http://www.randymurrayproductions.com/RMP-wordpress/wp-content/themes/RMP/video/rmp.mp4',{
+            ambient:true,
+            altSource:'http://www.randymurrayproductions.com/RMP-wordpress/wp-content/themes/RMP/video/rmp.oggtheora.ogv'
+        });
+    }
+
+    //NAV CONTACT
+    $('header .tip-btn').click(function(){
+
+        var data = $(this).attr('data');
+
+        if( $(this).hasClass('active') ){
+            $('.tip-btn').removeClass('active');
+
+            $('.contact-tip').slideUp('fast');
+
+        }else{
+            $('.tip-btn').removeClass('active');
+            $(this).addClass('active');
+
+            $('.contact-tip').slideUp('fast');
+            setTimeout(function(){
+                $('.contact-tip.' + data).slideDown('fast');
+            },250);
+        }
+
+        return false;
+    });
+
     //HOME-------->
     if(window.body.hasClass('home')){
 
-        $('header .tip-btn').click(function(){
+    }
 
-        });
+    //WHAT WE DO-------->
+    if(window.body.hasClass('what-we-do')){
+
+        //EXPAND WITH QUERY STRING
+        queryStringPanel('p');
+
     }
 
 

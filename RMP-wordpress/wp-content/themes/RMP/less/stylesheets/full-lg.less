@@ -1,5 +1,5 @@
 /* --------------------------------------------------- *\
-  TABLET
+  FULL
 \* --------------------------------------------------- */
 
 //SHARED
@@ -50,11 +50,12 @@
 
 }
 
-
-
 //TEMPLATE
 
-
+.wrapper{
+  width: 1450px;
+  margin: 0 auto;
+}
 
 .outer-container{
 
@@ -64,6 +65,7 @@ header{
 
 
   .header-wrapper{
+    .wrapper;
 
     .left-header{
 
@@ -106,6 +108,7 @@ header{
   .header-contact-links{
 
     .contact-links-wrapper{
+      .wrapper;
 
       .contact-tip{
 
@@ -121,7 +124,7 @@ header{
 }
 
 section.main{
-
+  .wrapper;
 }
 
 footer{
@@ -132,12 +135,7 @@ footer{
 
 .home{
 
-  .outer-container{
-    padding-top: 25em;
-  }
-
   .hero-container{
-    margin: 0 auto;
 
     .hero-logo{
 
@@ -149,12 +147,15 @@ footer{
   }
 
   .home-nav{
-    max-width: none;
 
     a{
-      .inline(middle);
-      width: 8em;
-      margin: 0 .25em;
+
     }
   }
 }
+
+
+/* --------------------------------------------------- *\
+  CROSSBROWSING
+\* --------------------------------------------------- */
+

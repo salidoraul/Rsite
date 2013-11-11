@@ -60,6 +60,7 @@ $x_browser_classes = html_classes( $browser->getBrowser(),$browser->getPlatform(
     <!--// STYLESHEETS ////////////-->
 
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/bigvideo.css" />
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/component.css" />
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/styles.css" />
 
@@ -76,47 +77,69 @@ $x_browser_classes = html_classes( $browser->getBrowser(),$browser->getPlatform(
 
 <div id="st-container" class="st-container">
 
-    <div class="st-pusher">
-
-        <!-- OFF-CANVAS NAV -->
-        <nav class="st-menu st-effect-6" id="menu-6">
+    <!-- OFF-CANVAS NAV -->
+    <nav class="st-menu st-effect-1" id="menu-1">
+        <div class="nav-wrapper">
+            <img class="nav-logo" src="<?php bloginfo("template_url"); ?>/images/rmp-logo.png" alt="Randy Murray Productions"/>
             <?php wp_nav_menu( array( 'menu' => 'Main' ) ); ?>
-        </nav>
+        </div>
+    </nav>
+
+    <div class="st-pusher">
 
         <div class="st-content">
             <div class="st-content-inner">
 
                 <!--HEADER-->
-                <header class="main-header clearfix">
-                    <div class="left-header">
-                        <img class="header-logo" src="<?php bloginfo('template_url'); ?>/images/rmp-sun.png" alt="RMP"/>
-                        <div id="st-trigger-effects" class="column nav-btn">
-                            <div id="menu-btn" data-effect="st-effect-6">
-                                <div class="menu-icon">
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
+                <header class="main-header">
+                    <div class="header-wrapper clearfix">
+                        <!--LEFT-->
+                        <div class="left-header">
+                            <a href="<?php bloginfo('url'); ?>" class="header-logo">
+                                <img src="<?php bloginfo('template_url'); ?>/images/rmp-sun.png" alt="RMP"/>
+                            </a>
+                            <div id="st-trigger-effects" class="column nav-btn">
+                                <div id="menu-btn" data-effect="st-effect-1">
+                                    <div class="menu-icon">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                    <div class="menu-title">Menu</div>
                                 </div>
-                                <div class="menu-title">Menu</div>
+                            </div>
+                        </div>
+                        <!--RIGHT-->
+                        <div class="right-header">
+                            <?php
+                                $contact_email = get_option('company_information_contact_email');
+                                $contact_phone = get_option('company_information_contact_phone');
+                            ?>
+                            <div class="email-section header-contact">
+                                <a href="#" class="tip-btn" data="email">
+                                    <span class="glyphicon glyphicon-envelope"></span>
+                                </a>
+                            </div>
+                            <div class="phone-section header-contact">
+                                <a href="#" class="tip-btn" data="phone">
+                                    <span class="glyphicon glyphicon-earphone"></span>
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="right-header">
-                        <?php
-                            $contact_email = get_option('company_information_contact_email');
-                            $contact_phone = get_option('company_information_contact_phone');
-                        ?>
-                        <div class="email-section header-contact">
-                            <a href="#" data-toggle="tooltip" title="<a href='mailto:<?= $contact_email ?>'><?= $contact_email ?></a>" class="tip-btn">
-                                <img src="<?php bloginfo('template_url'); ?>/images/mail-icon.png">
-                            </a>
-                        </div>
-                        <div class="phone-section header-contact">
-                            <a href="#" data-toggle="tooltip" title="<a href='<?= $contact_phone ?>' class='phone-link'><?= $contact_phone ?></a>" class="tip-btn">
-                                <img src="<?php bloginfo('template_url'); ?>/images/phone-icon.png">
-                            </a>
+
+                    <!--HEADER-CONTACT-->
+                    <div class="header-contact-links">
+                        <div class="contact-links-wrapper">
+                            <div class="contact-tip email">
+                                <a href='mailto:<?= $contact_email ?>'><?= $contact_email ?></a>
+                            </div>
+                            <div class="contact-tip phone">
+                                <a href='<?= $contact_phone ?>' class='phone-link'><?= $contact_phone ?></a>
+                            </div>
                         </div>
                     </div>
                 </header>
 
+                <section class="outer-container">
                 <!--MAIN-->

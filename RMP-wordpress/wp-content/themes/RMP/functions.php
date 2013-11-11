@@ -40,7 +40,7 @@ function the_parent_slug() {
 add_action( 'init', 'pull_menu_order_to_posts' );
 function pull_menu_order_to_posts()
 {
-    add_post_type_support( 'home_slides', 'page-attributes' );
+    add_post_type_support( 'services', 'page-attributes' );
 }
 
 //MENUS

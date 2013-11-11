@@ -16,30 +16,30 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'RMPwordpress');
-
-/** MySQL database username */
-define('DB_USER', 'RMPwordpress');
-
-/** MySQL database password */
-define('DB_PASSWORD', 'db4Rmp@WP12##');
-
-/** MySQL hostname */
-define('DB_HOST', '10.6.175.48');
-
-/** Database Charset to use in creating database tables. */
-define('DB_CHARSET', 'utf8');
-
-/** The Database Collate type. Don't change this if in doubt. */
-define('DB_COLLATE', '');
+//define('DB_NAME', 'RMPwordpress');
+//
+///** MySQL database username */
+//define('DB_USER', 'RMPwordpress');
+//
+///** MySQL database password */
+//define('DB_PASSWORD', 'db4Rmp@WP12##');
+//
+///** MySQL hostname */
+//define('DB_HOST', '10.6.175.48');
+//
+///** Database Charset to use in creating database tables. */
+//define('DB_CHARSET', 'utf8');
+//
+///** The Database Collate type. Don't change this if in doubt. */
+//define('DB_COLLATE', '');
 
 /* LOCAL */
-//define('DB_NAME', 'rsite');
-//define('DB_USER', 'root');
-//define('DB_PASSWORD', 'root');
-//define('DB_HOST', 'localhost');
-//define('DB_CHARSET', 'utf8');
-//define('DB_COLLATE', '');
+define('DB_NAME', 'rsite');
+define('DB_USER', 'root');
+define('DB_PASSWORD', 'root');
+define('DB_HOST', 'localhost');
+define('DB_CHARSET', 'utf8');
+define('DB_COLLATE', '');
 
 /**#@+
  * Authentication Unique Keys and Salts.

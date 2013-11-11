@@ -3,77 +3,232 @@
 \* --------------------------------------------------- */
 
 
-//TEMPLATE
+//SHARED
 
-header{
+.padding{
+  padding: 1em;
+}
+
+.text-sep{
+  letter-spacing: 2px;
+}
+
+//OFF-CANVAS NAV
+.st-menu{
+  width: 15em;
   .dk-bg;
-  padding: .5em;
 
-  .left-header{
-    .left;
+  .nav-wrapper{
+    height: 100%;
+    .padding;
 
-    .header-logo{
-      .inline(middle);
-      width: 3em;
-      margin: 0 .5em 0 0;
-      height: auto;
+    .nav-logo{
+      margin: 0 0 1em 0;
     }
 
-    .nav-btn{
-      .inline(middle);
+    #menu-main{
+      text-align: center;
 
-      .menu-icon{
-        .inline(middle);
-        width: 1.5em;
-        margin: 0 .5em 0 0;
+      .menu-item{
+        .font-size(1.4em,1.4em);
+        padding: .25em 0;
 
-        div{
-          width: 100%;
-          height: 3px;
-          margin-bottom: 3px;
-          background: @purple;
+        a{
+          color: @purple;
+
+          &:hover{
+            color: @purple;
+          }
+        }
+
+        .sub-menu{
+
+          .menu-item{
+            .font-size(.9em,.9em);
+
+            a{
+              color: @grey;
+
+              &:hover{
+                color: @grey;
+              }
+            }
+          }
         }
       }
 
-      .menu-title{
+      .menu-item-has-children{
+        padding: .5em 0;
+      }
+    }
+  }
+}
+
+.st-effect-6.st-menu-open .st-pusher {
+	-webkit-transform: translate3d(200px, 0, 0) rotateY(-15deg);
+	transform: translate3d(200px, 0, 0) rotateY(-15deg);
+}
+
+//TEMPLATE
+
+.wrapper{
+  position: relative;
+  width: 100%;
+}
+
+.outer-container{
+  padding: 0 1em;
+}
+
+header{
+  .dk-bg;
+  .lh-box-shadow(0 0 5px @black);
+
+  .header-wrapper{
+    .wrapper;
+    padding: .5em;
+
+    .left-header{
+      .left;
+
+      .header-logo{
         .inline(middle);
-        .font-size(1.2em,1em);
-        text-transform: uppercase;
-        color: @purple;
+        width: 3em;
+        margin: 0 .5em 0 0;
+
+        img{
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .nav-btn{
+        .inline(middle);
+
+        .menu-icon{
+          .inline(middle);
+          width: 1.5em;
+          margin: 0 .5em 0 0;
+
+          div{
+            width: 100%;
+            height: 3px;
+            margin-bottom: 3px;
+            background: @purple;
+          }
+        }
+
+        .menu-title{
+          .inline(middle);
+          .font-size(1.2em,1em);
+          text-transform: uppercase;
+          color: @purple;
+        }
+      }
+    }
+
+    .right-header{
+      .right;
+      padding: .3em 0;
+      cursor: pointer;
+
+      .header-contact{
+        .inline(middle);
+
+        a{
+          .inline(middle);
+          margin: 0 .2em;
+          .font-size(1.6em,1.2em);
+          .lh-transition(all .3s ease);
+          border-bottom: 2px solid transparent;
+
+          &.active{
+            color: @lt-purple;
+            border-color: @lt-purple;
+          }
+        }
       }
     }
   }
 
-  .right-header{
-    .right;
-    padding: .3em 0;
+  .header-contact-links{
+    background: @lt-purple;
 
-    .header-contact{
-      .inline(middle);
+    .contact-links-wrapper{
+      .wrapper;
 
-      a{
-        .inline(middle);
+      .contact-tip{
+        display: none;
+        padding: .5em;
+        .font-size(1.1em,1.1em);
+        text-align: right;
+
+        a{
+          color: @black;
+
+          &:hover{
+            color: @black !important;
+          }
+        }
       }
     }
-
-    .email-section{
-      width: 2.5em;
-      margin: 0 .5em;
-    }
-
-    .phone-section{
-      width: 1.8em;
-    }
-
   }
 }
 
 section.main{
-
+  .wrapper;
 }
 
 footer{
   display: none;
+}
+
+//HOME
+
+.home{
+
+  .outer-container{
+    padding-top: 2em;
+  }
+
+  .hero-container{
+    .dk-bg;
+    margin: 0 auto;
+    max-width: 24em;
+    text-align: center;
+
+    .hero-logo{
+      padding: 1em 1.5em;
+    }
+
+    .hero-slogan{
+      display: block;
+      margin: 0;
+      padding: 0 1em 1em;
+      color: @purple;
+      text-transform: uppercase;
+      .font-size(1.2em,1.4em);
+      .text-sep;
+    }
+  }
+
+  .home-nav{
+    text-align: center;
+    max-width: 24em;
+    margin: 0 auto;
+    .text-sep;
+
+    a{
+      display: block;
+      .dk-bg;
+      max-width: 24em;
+      margin: .25em 0;
+      padding: .5em;
+      .font-size(1.4em,1em);
+      text-transform: uppercase;
+    }
+  }
+
 }
 
 /* --------------------------------------------------- *\
