@@ -83,7 +83,7 @@ function loadSpinner(targetElement){
           corners: 1, // Corner roundness (0..1)
           rotate: 0, // The rotation offset
           direction: 1, // 1: clockwise, -1: counterclockwise
-          color: '#000', // #rgb or #rrggbb or array of colors
+          color: '#FFF', // #rgb or #rrggbb or array of colors
           speed: 1.6, // Rounds per second
           trail: 52, // Afterglow percentage
           shadow: false, // Whether to render a shadow
@@ -115,18 +115,6 @@ $(function(){
     window.body = $('body');
     window.win_width = $(window).width();
 
-    //VIDEO BG
-    var BV = new $.BigVideo({useFlashForFirefox:false});
-    BV.init();
-    if (Modernizr.touch) {
-        BV.show('http://www.randymurrayproductions.com/RMP-wordpress/wp-content/themes/RMP/video/poster.jpg');
-    } else{
-        BV.show('http://www.randymurrayproductions.com/RMP-wordpress/wp-content/themes/RMP/video/rmp.mp4',{
-            ambient:true,
-            altSource:'http://www.randymurrayproductions.com/RMP-wordpress/wp-content/themes/RMP/video/rmp.oggtheora.ogv'
-        });
-    }
-
     //NAV CONTACT
     $('header .tip-btn').click(function(){
 
@@ -157,6 +145,101 @@ $(function(){
 
     //WHAT WE DO-------->
     if(window.body.hasClass('what-we-do')){
+
+        //LOAD VIDEO GALLERY THUMBS
+        $('.accordion-toggle').click(function(){
+
+            if( !$(this).hasClass('loaded') ){
+
+                //VARS
+                var service_type = $(this).attr('ajax-data'),
+                    service_url = base_url + '/what-we-do/?serv=' + service_type + '&thumbs=1&auth=y';
+
+                //AJAX THUMBS//////////////
+                $('#services').on('shown.bs.collapse', function() {
+
+                    //SCROLL DOWN
+                    setTimeout(function(){
+                        var offset = $('.accordion-toggle.' + service_type).offset().top;
+                        console.log(offset);
+                        animatedScroll(offset);
+                    },1000);
+
+                    //GET THUMBS
+                    $.ajax({
+                        url: service_url,
+                        beforeSend: function(){
+
+                            //SPIN
+                            loadSpinner('thumbs-container-'+service_type);
+
+                        },
+                        success: function(response){
+
+                            var html = $(response).find('.the-thumbs').html();
+
+                            //REMOVE SPIN
+                            $('.spinner').remove();
+
+                            //ADD ITEMS
+                            $('#thumbs-container-' + service_type + ' .thumbs-content').html(html);
+
+                        },
+                        complete: function(){
+
+                            //SCROLLBAR
+                            var these_thumbs = $('#thumbs-container-' + service_type + ' .thumb-item'),
+                                count = these_thumbs.size(),
+                                width = these_thumbs.width() + 2.5,
+                                height = these_thumbs.height() + 10,
+                                result = count * width;
+                            $('#thumbs-container-' + service_type + ' .thumbs-content').css('width',result);
+                            $('#thumbs-container-' + service_type).animate({height: height}).perfectScrollbar();
+
+                            //ADD 'LOADED' CLASS
+                            $('.accordion-toggle.' + service_type).addClass('loaded');
+
+                                //AJAX FOR VIDEO GALLERY PROJECT ///////////////////
+                                $('.thumbs-container .thumb-item').click(function(){
+
+                                    //VARS
+                                    var project_id = $(this).attr('href'),
+                                        project_cont = $(this).parent().parent().siblings().attr('id'),
+                                        project_url = base_url + '/what-we-do/?proj=' + project_id + '&auth=y';
+
+                                    //GRAB SPECIFIC PROJECT
+                                    $.ajax({
+                                        url: project_url,
+                                        beforeSend: function(){
+
+                                            //SPIN
+                                            loadSpinner(project_cont);
+
+                                        },
+                                        success: function(response){
+
+                                            var html = $(response).find('.the-project').html();
+
+                                            //REMOVE SPIN
+                                            $('.spinner').remove();
+                                            //ADD ITEMS
+                                            $('#' + project_cont).html(html);
+
+                                        },
+                                        complete: function(){
+
+                                            $(this).addClass('loaded');
+
+                                        }
+                                    });
+
+                                    return false;
+                                });
+                        }
+                    });
+                });
+            }
+        });
 
         //EXPAND WITH QUERY STRING
         queryStringPanel('p');

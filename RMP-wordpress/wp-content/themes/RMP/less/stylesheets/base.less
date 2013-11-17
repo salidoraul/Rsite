@@ -121,6 +121,7 @@ img {
 //COLORS
 
 @white: #ffffff;
+@lt-grey: #B2B2B2;
 @grey: #5B5D58;
 @black: #000000;
 
@@ -132,6 +133,12 @@ img {
 @import url(http://fonts.googleapis.com/css?family=Fjalla+One);
 .fjalla(@weight:300){//300
   font-family: 'Fjalla One', sans-serif;
+  font-weight: @weight;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700,300italic,400italic,700italic);
+.source(@weight:300){//300,400,700
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: @weight;
 }
 

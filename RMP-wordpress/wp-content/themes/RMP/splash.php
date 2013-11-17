@@ -125,7 +125,7 @@ Template Name: Splash Page
 </body>
 
 <!--// SCRIPTS /////////////-->
-<script src="http://vjs.zencdn.net/4.0/video.js"></script>
+<script type="text/javascript" src="http://vjs.zencdn.net/4.0/video.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/bigvideo.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/bootstrap.js"></script>
 <script type="text/javascript">
@@ -135,7 +135,7 @@ Template Name: Splash Page
         if (Modernizr.touch) {
             BV.show('http://www.randymurrayproductions.com/RMP-wordpress/wp-content/themes/RMP/video/poster.jpg');
         } else{
-            BV.show('http://www.randymurrayproductions.com/RMP-wordpress/wp-content/themes/RMP/video/rmp.mp4',{
+            BV.show('http://www.randymurrayproductions.com/RMP-wordpress/wp-content/themes/RMP/video/rmp-video.mp4',{
                 ambient:true,
                 altSource:'http://www.randymurrayproductions.com/RMP-wordpress/wp-content/themes/RMP/video/rmp.oggtheora.ogv'
             });

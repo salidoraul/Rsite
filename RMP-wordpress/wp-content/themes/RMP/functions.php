@@ -36,6 +36,9 @@ function the_parent_slug() {
   return $post_data->post_name;
 }
 
+//PROJECTS TOOL URL
+define('PROJECT_TOOL','RMP-wordpress/wp-content/themes/RMP/includes/project-tool.php');
+
 //ADD MENU ORDER TO CUSTOM POSTS
 add_action( 'init', 'pull_menu_order_to_posts' );
 function pull_menu_order_to_posts()

@@ -13,7 +13,13 @@
   letter-spacing: 2px;
 }
 
+.content-text{
+  .font-size(1.2em,1.6em);
+  .source(300);
+}
+
 //OFF-CANVAS NAV
+
 .st-menu{
   width: 15em;
   .dk-bg;
@@ -28,6 +34,7 @@
 
     #menu-main{
       text-align: center;
+      text-transform: uppercase;
 
       .menu-item{
         .font-size(1.4em,1.4em);
@@ -228,7 +235,134 @@ footer{
       text-transform: uppercase;
     }
   }
+}
 
+//WHAT WE DO
+
+.what-we-do{
+
+  //SHARED
+
+  .panel-tab{
+    margin: 0;
+    padding: .5em;
+    display: block;
+    .text-sep;
+    text-transform: uppercase;
+    .font-size(1.4em,1em);
+  }
+
+  //TABS
+
+  .main{
+
+    .tabs-container{
+      padding: 1em 0;
+
+      .main-title{
+        .panel-tab;
+        .dk-bg;
+        margin: 0 0 .5em;
+        text-align: left;
+        color: @purple;
+      }
+
+      .panel-group{
+
+        .panel{
+          .dk-bg;
+          margin-bottom: .5em;
+
+          .panel-heading{
+
+            .panel-title{
+              margin: 0;
+
+              .accordion-toggle{
+                .panel-tab;
+                color: @purple;
+                .lh-transition(color .3s ease);
+
+                .title{
+                  .left;
+                }
+
+                .glyphicon{
+                  .right;
+                  width: 13px;
+                  height: 15px;
+                  .font-size(.7em,1em);
+                  .lh-transition(transform .3s ease);
+                }
+
+                &:hover{
+                  color: @purple;
+                }
+
+                &.collapsed{
+                  color: @grey;
+
+                  .glyphicon{
+                    .lh-rotate(-180deg);
+                  }
+
+                  &:hover{
+                    color: @grey;
+                  }
+
+                }
+              }
+            }
+          }
+
+          .panel-body{
+            padding: 0 .5em .5em;
+
+            .content{
+              .content-text;
+              color: @lt-grey;
+            }
+
+            .video-gallery-outer{
+
+              .thumbs-container{
+                margin: .5em 0;
+                position: relative;
+                width: 100%;
+                height: 0;
+                overflow: hidden;
+
+                .thumbs-content{
+
+                  .thumb-item{
+                    .inline(middle);
+                    width: 5em;
+
+                    img{
+                      width: 100%;
+                      height: auto;
+                    }
+                  }
+                }
+
+                .ps-scrollbar-x-rail{
+                  background: transparent;
+
+                  &:hover{
+                    background: transparent;
+                  }
+
+                  .ps-scrollbar-x{
+                    height: 5px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 /* --------------------------------------------------- *\

@@ -20,9 +20,23 @@
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery_cookie.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/bootstrap.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/spin.min.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/perfect-scrollbar-0.4.5.with-mousewheel.min.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.history.js"></script>
 
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/scripts.js"></script>
+    <script type="text/javascript">
+        //VIDEO BG /////////////////////////////////////////
+        var BV = new $.BigVideo({useFlashForFirefox:false});
+        BV.init();
+        if (Modernizr.touch) {
+            BV.show('http://www.randymurrayproductions.com/RMP-wordpress/wp-content/themes/RMP/video/poster.jpg');
+        } else{
+            BV.show('http://www.randymurrayproductions.com/RMP-wordpress/wp-content/themes/RMP/video/rmp-video.mp4',{
+                ambient:true,
+                altSource:'http://www.randymurrayproductions.com/RMP-wordpress/wp-content/themes/RMP/video/rmp.oggtheora.ogv'
+            });
+        }
+    </script>
 
 </body>
 </html>
