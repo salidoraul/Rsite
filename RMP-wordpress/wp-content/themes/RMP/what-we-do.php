@@ -42,10 +42,13 @@ get_header(); ?>
                         <div class="panel-body">
                             <div class="content"><?= $content ?></div>
                             <div class="video-gallery-outer">
+                                <h2 class="projects-title">Projects</h2>
                                 <div id="thumbs-container-<?= $panel_slug ?>" class="thumbs-container">
                                     <div class="thumbs-content"></div>
                                 </div>
-                                <div id="details-container-<?= $panel_slug ?>"></div>
+                                <div id="details-container-<?= $panel_slug ?>" class="project-details">
+                                    <div class="blur-container"></div>
+                                </div>
                             </div>
                         </div>
                     </div>

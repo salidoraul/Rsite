@@ -306,10 +306,11 @@ textarea {
   letter-spacing: 2px;
 }
 .content-text {
-  font-size: 1.2em;
+  font-size: 1.1em;
   line-height: 1.6em;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
+  color: #b2b2b2;
 }
 .st-menu {
   width: 15em;
@@ -597,11 +598,19 @@ footer {
   padding: 0 .5em .5em;
 }
 .what-we-do .main .tabs-container .panel-group .panel .panel-body .content {
-  font-size: 1.2em;
+  font-size: 1.1em;
   line-height: 1.6em;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
   color: #b2b2b2;
+}
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .projects-title {
+  color: #9aa5e8;
+  font-size: 1.3em;
+  line-height: 1em;
+  margin-top: 1.5em;
+  text-transform: uppercase;
+  text-align: left;
 }
 .what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .thumbs-container {
   margin: .5em 0;
@@ -616,10 +625,23 @@ footer {
   *display: inline;
   vertical-align: middle;
   width: 5em;
+  line-height: 0;
+  -webkit-opacity: 0.7;
+  -moz-opacity: 0.7;
+  opacity: 0.7;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .thumbs-container .thumbs-content .thumb-item img {
   width: 100%;
   height: auto;
+}
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .thumbs-container .thumbs-content .thumb-item.active {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
 }
 .what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .thumbs-container .ps-scrollbar-x-rail {
   background: transparent;
@@ -629,6 +651,61 @@ footer {
 }
 .what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .thumbs-container .ps-scrollbar-x-rail .ps-scrollbar-x {
   height: 5px;
+}
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .project-details .blur-container {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .project-details .blur-container.blurred {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+  -webkit-opacity: 0.3;
+  -moz-opacity: 0.3;
+  opacity: 0.3;
+}
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .project-details .project-item .title {
+  padding: 1em 0;
+  margin: 0 0 .5em;
+  border-bottom: 1px solid #9aa5e8;
+}
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .project-details .project-item .title h2 {
+  margin: 0;
+  color: #9aa5e8;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  line-height: 0.8em;
+}
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .project-details .project-item .info-container .desc {
+  font-size: 1.1em;
+  line-height: 1.6em;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  color: #b2b2b2;
+}
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .project-details .project-item .info-container.w-logo .client-logo {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  vertical-align: top;
+  width: 20%;
+  margin: .2em .2em 0 0;
+}
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .project-details .project-item .info-container.w-logo .client-logo img {
+  width: 100%;
+  max-width: 100%;
+}
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .project-details .project-item .info-container.w-logo .desc {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  vertical-align: top;
+  width: 77%;
 }
 /* --------------------------------------------------- *\
   CROSSBROWSING

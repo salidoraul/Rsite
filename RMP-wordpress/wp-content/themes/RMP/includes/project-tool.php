@@ -71,10 +71,12 @@ RSA;
                             <div class='video-container'>
                                 <?= $vimeo_player ?>
                             </div>
-                            <div class="info-container <?php if($client_logo){echo 'w-logo';}?>">
-                                <div class="title">
-                                    <h2><?= $title ?></h2>
-                                </div>
+
+                            <div class="title">
+                                <h2><?= $title ?></h2>
+                            </div>
+
+                            <div class="info-container<?php if($client_logo){echo ' w-logo';}?>">
                                 <?php
                                 if($client_logo){ ?>
                                     <div class="client-logo">

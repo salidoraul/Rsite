@@ -115,6 +115,27 @@ $(function(){
     window.body = $('body');
     window.win_width = $(window).width();
 
+    //VIDEO BG /////////////////////////////////////////
+    if (!Modernizr.touch){
+        var BV = new $.BigVideo({useFlashForFirefox:false});
+        BV.init();
+        BV.show('http://www.randymurrayproductions.com/RMP-wordpress/wp-content/themes/RMP/video/rmp-video.mp4',{
+            ambient: true,
+            altSource: 'http://www.randymurrayproductions.com/RMP-wordpress/wp-content/themes/RMP/video/rmp.oggtheora.ogv'
+        });
+    }
+
+    //NAV
+    $('.st-menu a').click(function(){
+
+        var url = $(this).attr('href');
+        $('.st-pusher').trigger('click');
+
+        ///////AJAX FUNCTION GOES HERE
+
+        return false;
+    });
+
     //NAV CONTACT
     $('header .tip-btn').click(function(){
 
@@ -151,19 +172,11 @@ $(function(){
 
             if( !$(this).hasClass('loaded') ){
 
-                //VARS
                 var service_type = $(this).attr('ajax-data'),
                     service_url = base_url + '/what-we-do/?serv=' + service_type + '&thumbs=1&auth=y';
 
-                //AJAX THUMBS//////////////
+                //AJAX THUMBS//////////////////////////////////////
                 $('#services').on('shown.bs.collapse', function() {
-
-                    //SCROLL DOWN
-                    setTimeout(function(){
-                        var offset = $('.accordion-toggle.' + service_type).offset().top;
-                        console.log(offset);
-                        animatedScroll(offset);
-                    },1000);
 
                     //GET THUMBS
                     $.ajax({
@@ -171,7 +184,7 @@ $(function(){
                         beforeSend: function(){
 
                             //SPIN
-                            loadSpinner('thumbs-container-'+service_type);
+                            loadSpinner('thumbs-container-' + service_type);
 
                         },
                         success: function(response){
@@ -199,12 +212,17 @@ $(function(){
                             //ADD 'LOADED' CLASS
                             $('.accordion-toggle.' + service_type).addClass('loaded');
 
-                                //AJAX FOR VIDEO GALLERY PROJECT ///////////////////
-                                $('.thumbs-container .thumb-item').click(function(){
+                            //AJAX FOR VIDEO GALLERY PROJECT ///////////////////////////////////////////////
+                            $('.thumbs-container .thumb-item').click(function(){
+
+                                if( !$(this).hasClass('active') ){
+
+                                    $('.thumbs-container .thumb-item').removeClass('active');
+                                    $(this).addClass('active');
 
                                     //VARS
                                     var project_id = $(this).attr('href'),
-                                        project_cont = $(this).parent().parent().siblings().attr('id'),
+                                        project_cont = $(this).parent().parent().siblings('.project-details').attr('id'),
                                         project_url = base_url + '/what-we-do/?proj=' + project_id + '&auth=y';
 
                                     //GRAB SPECIFIC PROJECT
@@ -214,6 +232,8 @@ $(function(){
 
                                             //SPIN
                                             loadSpinner(project_cont);
+                                            //BLUR
+                                            $('#' + project_cont + ' .blur-container').addClass('blurred');
 
                                         },
                                         success: function(response){
@@ -222,8 +242,8 @@ $(function(){
 
                                             //REMOVE SPIN
                                             $('.spinner').remove();
-                                            //ADD ITEMS
-                                            $('#' + project_cont).html(html);
+                                            //ADD ITEMS & REMOVE BLUR
+                                            $('#' + project_cont + ' .blur-container').html(html).removeClass('blurred');
 
                                         },
                                         complete: function(){
@@ -233,8 +253,11 @@ $(function(){
                                         }
                                     });
 
-                                    return false;
-                                });
+                                }
+
+                                return false;
+
+                            });
                         }
                     });
                 });
@@ -242,7 +265,7 @@ $(function(){
         });
 
         //EXPAND WITH QUERY STRING
-        queryStringPanel('p');
+        queryStringPanel('s');
 
     }
 
