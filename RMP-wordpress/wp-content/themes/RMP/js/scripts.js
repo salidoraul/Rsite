@@ -117,11 +117,12 @@ $(function(){
 
     //VIDEO BG /////////////////////////////////////////
     if (!Modernizr.touch){
+
         var BV = new $.BigVideo({useFlashForFirefox:false});
         BV.init();
         BV.show('http://www.randymurrayproductions.com/RMP-wordpress/wp-content/themes/RMP/video/rmp-video.mp4',{
             ambient: true,
-            altSource: 'http://www.randymurrayproductions.com/RMP-wordpress/wp-content/themes/RMP/video/rmp.oggtheora.ogv'
+            altSource: 'http://www.randymurrayproductions.com/RMP-wordpress/wp-content/themes/RMP/video/rmp-video.ogv'
         });
     }
 
@@ -167,16 +168,18 @@ $(function(){
     //WHAT WE DO-------->
     if(window.body.hasClass('what-we-do')){
 
-        //LOAD VIDEO GALLERY THUMBS
+        //LOAD VIDEO GALLERY THUMBS/////////////
         $('.accordion-toggle').click(function(){
 
-            if( !$(this).hasClass('loaded') ){
+            var service_type = $(this).attr('ajax-data'),
+                current_tab = '.accordion-toggle.' + service_type,
+                service_url = base_url + '/what-we-do/?serv=' + service_type + '&thumbs=1&auth=y';
 
-                var service_type = $(this).attr('ajax-data'),
-                    service_url = base_url + '/what-we-do/?serv=' + service_type + '&thumbs=1&auth=y';
+            //AJAX THUMBS//////////////////////////////////////
+            $('#services').on('shown.bs.collapse', function() {
 
-                //AJAX THUMBS//////////////////////////////////////
-                $('#services').on('shown.bs.collapse', function() {
+                //ONLY FOR NON-LOADED ITEMS
+                if( !$(current_tab).hasClass('loaded') ){
 
                     //GET THUMBS
                     $.ajax({
@@ -200,6 +203,8 @@ $(function(){
                         },
                         complete: function(){
 
+                            $(current_tab).addClass('loaded');
+
                             //SCROLLBAR
                             var these_thumbs = $('#thumbs-container-' + service_type + ' .thumb-item'),
                                 count = these_thumbs.size(),
@@ -208,9 +213,6 @@ $(function(){
                                 result = count * width;
                             $('#thumbs-container-' + service_type + ' .thumbs-content').css('width',result);
                             $('#thumbs-container-' + service_type).animate({height: height}).perfectScrollbar();
-
-                            //ADD 'LOADED' CLASS
-                            $('.accordion-toggle.' + service_type).addClass('loaded');
 
                             //AJAX FOR VIDEO GALLERY PROJECT ///////////////////////////////////////////////
                             $('.thumbs-container .thumb-item').click(function(){
@@ -248,8 +250,6 @@ $(function(){
                                         },
                                         complete: function(){
 
-                                            $(this).addClass('loaded');
-
                                         }
                                     });
 
@@ -260,8 +260,8 @@ $(function(){
                             });
                         }
                     });
-                });
-            }
+                }
+            });
         });
 
         //EXPAND WITH QUERY STRING
@@ -269,6 +269,177 @@ $(function(){
 
     }
 
+    //WHO WE ARE-------->
+    if(window.body.hasClass('who-we-are')){
+
+        //TEAM MODULE
+        $('.team-module .team-thumb').click(function(){
+
+            var data = $(this).attr('data-filter'),
+                item_h = $('.team-items').height();
+
+            if( !$(this).hasClass('active') ){
+
+                $('.team-module .team-thumb').removeClass('active');
+                $(this).addClass('active');
+
+                //BLUR AND REPLACE TEAM ITEMS
+                $('.team-items').css('height',item_h);
+                $('.team-items .blur-container').addClass('blurred');
+                setTimeout(function(){
+                    $('.team-item').hide();
+                    $('.team-item.' + data).show();
+                    $('.team-items').css('height','auto');
+                    $('.team-items .blur-container').removeClass('blurred');
+                },1000);
+            }
+
+        });
+
+    }
+
+    //CONTACT---------->
+    if(window.body.hasClass('contact')){
+
+        //GOOGLE MAP API
+        var infoBubble,
+            icon = template_url + '/images/z-pin.png';
+
+        function initialize_map(lat,lon){
+
+            // Geolocation function.
+            function geolocation(lat,lon){
+                return new google.maps.LatLng(lat,lon);
+            }
+
+            // Geolocation vars.
+            var loc = geolocation(lat, lon),
+                ibLoc = geolocation(lat + 10, lon),
+                centerLoc = geolocation(lat + 15, lon);
+
+            // Create an array of styles.
+            var styles = [
+            {
+                "stylers": [
+                  { "hue": "#7079ce" },
+                  { "saturation": -60 },
+                  { "lightness": -5 },
+                  { "gamma": 0.90 }
+                ]
+            },{
+                featureType: "road"
+            },
+            {
+                "elementType": "labels.icon",
+                "stylers": [
+                  { "hue": "#bf358e" }
+                ]
+            },
+            {
+                "elementType": "labels.text.fill",
+                "stylers": [
+                  { "hue": "#bf358e" }
+                ]
+              },{
+                "elementType": "labels.text.stroke",
+                "stylers": [
+                  { "hue": "#bf358e" }
+                ]
+              }
+            ];
+
+            // Style the map.
+            var styledMap = new google.maps.StyledMapType(styles,{name: "Styled Map"});
+
+            // Create a map object.
+            var mapOptions = {
+                zoom: 15,
+                scrollwheel: false,
+                center: centerLoc,
+                disableDefaultUI: true,
+                mapTypeControlOptions: {
+                mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+            }
+            };
+            var map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+
+            // Associate the styled map.
+            map.mapTypes.set('map_style', styledMap);
+            map.setMapTypeId('map_style');
+
+            // Set marker.
+            marker = new google.maps.Marker({
+                map: map,
+                draggable: false,
+                position: loc
+            });
+            iconFile = icon;
+            marker.setIcon(iconFile);
+
+            //Custom info bubble content.
+            var bubbleContent = '<div class="info-bubble"><div class="info-bubble-top"><span id="close" class="glyphicon glyphicon-remove"></span><div class="title">title</div><address>address</address></div></div>';
+
+            //Construct info bubble.
+            infoBubble = new InfoBubble({
+                maxWidth: 200,
+                map: map,
+                content: bubbleContent,
+                position: ibLoc,
+                shadowStyle: 1,
+                padding: 0,
+                backgroundColor: '#333333',
+                borderWidth: 0,
+                borderRadius: 5,
+                hideCloseButton: true
+            });
+
+            setTimeout(function(){
+                infoBubble.open();
+            },1500);
+
+            // Info Bubble controls.
+            setTimeout(function(){
+                google.maps.event.addListener(marker, 'click', function() {
+                    if (!infoBubble.isOpen()) {
+
+                        infoBubble.open();
+                        //Run DOMListeners on re-init.
+                        setTimeout(function(){
+                            DOMListeners();
+                        },500)
+
+                    } else {
+
+                        infoBubble.close();
+                    }
+                });
+
+                //DOM Listeners function.
+                function DOMListeners(){
+                    var close = document.getElementById('close');
+                    google.maps.event.addDomListener(close, 'click', function() {
+                        infoBubble.close();
+                    });
+
+                }
+
+                //Run DOM listeners.
+                DOMListeners();
+
+            },1650);
+
+        }
+
+        //SERVE MAPS BASED ON LOCATIONS
+        $('.location-item').click(function(){
+
+            var lat_lon = $(this).attr('data-filter').split(',');
+            initialize_map(lat_lon[0],lat_lon[1]);
+
+        });
+
+    }
 
 });
 

@@ -238,9 +238,9 @@ footer{
   }
 }
 
-//WHAT WE DO
+//WHAT WE DO & WHO WE ARE
 
-.what-we-do{
+.what-we-do, .who-we-are{
 
   //SHARED
 
@@ -323,6 +323,7 @@ footer{
               .content-text;
             }
 
+            //VIDEO GALLERY
             .video-gallery-outer{
 
               .projects-title{
@@ -432,11 +433,184 @@ footer{
                 }
               }
             }
+
+            //TEAM
+            .team-module{
+              color: @lt-grey;
+
+              .team-members{
+
+                .team-thumbs{
+                  text-align: center;
+                  padding: 1em 0;
+
+                  .team-thumb{
+                    width: 4em;
+                    margin: .25em;
+                    .inline();
+                    .lh-border-radius(50px);
+                    overflow: hidden;
+                    line-height: 0;
+                    text-align: center;
+                    .lh-grayscale(100%);
+                    .lh-transition(all .5s ease);
+
+                    img{
+                      width: 100%;
+                      height: auto;
+                    }
+
+                    &.active{
+                      .lh-grayscale(0%);
+                    }
+                  }
+                }
+
+                .team-items{
+                  position: relative;
+                  padding: .5em 0;
+
+                  .blur-container{
+                    .lh-transition(all .5s ease);
+
+                    &.blurred{
+                      .lh-blur(5px);
+                      .lh-opacity(0);
+                    }
+
+                    .team-item{
+                      .lh-transition(all .5s ease);
+                      text-align: center;
+                      display: none;
+
+                      &:first-child{
+                        display: block;
+                      }
+
+                      .image{
+                        .inline();
+                        .lh-border-radius(100px);
+                        overflow: hidden;
+                      }
+
+                      .info{
+
+                        .credentials{
+                          padding: .5em 0;
+
+                          .name{
+                            text-transform: uppercase;
+                            .font-size(1.3em, 1.3em);
+                          }
+
+                          .position{
+                            text-transform: uppercase;
+                            .font-size(1.3em, 1.3em);
+                            color: @purple;
+                          }
+
+                          .email{
+                            border-bottom: 1px solid @purple;
+                            padding: .5em 0;
+                            margin: 0 0 .5em;
+
+                            a{
+                              color: @lt-grey;
+                              text-transform: uppercase;
+
+                              &:hover{
+                                color: @lt-grey;
+                              }
+                            }
+                          }
+                        }
+
+                        .bio{
+                          .content-text;
+                          text-align: left;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }
     }
   }
+}
+
+//CONTACT
+
+.contact{
+
+  .information-section{
+
+    h1{
+
+    }
+
+    .info-container{
+
+      .info-item{
+
+        h3{
+
+        }
+
+        .info{
+
+        }
+
+        .phone{
+
+        }
+
+        .mobile{
+
+        }
+
+        .email{
+
+        }
+      }
+    }
+  }
+
+  .locations-section{
+
+    .locations{
+
+      .location-item{
+
+        .title{
+
+        }
+
+        .address-container{
+          display: none;
+        }
+      }
+    }
+  }
+
+  .locations-section{
+
+    .locations{
+
+    }
+
+    .map-container{
+      overflow: hidden;
+
+      #map-canvas{
+        height: 400px;
+      }
+    }
+  }
+
 }
 
 /* --------------------------------------------------- *\

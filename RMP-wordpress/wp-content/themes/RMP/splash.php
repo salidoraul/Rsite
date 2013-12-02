@@ -51,7 +51,6 @@ Template Name: Splash Page
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" class="<?= $x_browser_classes;?>">
 <head>
-<head>
 	<title>Randy Murray Productions</title>
 	<link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="icon" type="image/png" href="<?php bloginfo('template_url') ?>/images/icon.png" />
@@ -137,7 +136,7 @@ Template Name: Splash Page
         } else{
             BV.show('http://www.randymurrayproductions.com/RMP-wordpress/wp-content/themes/RMP/video/rmp-video.mp4',{
                 ambient:true,
-                altSource:'http://www.randymurrayproductions.com/RMP-wordpress/wp-content/themes/RMP/video/rmp.oggtheora.ogv'
+                altSource:'http://www.randymurrayproductions.com/RMP-wordpress/wp-content/themes/RMP/video/rmp-video.oggtheora.ogv'
             });
         }
 

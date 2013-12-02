@@ -518,7 +518,8 @@ footer {
   line-height: 1em;
   text-transform: uppercase;
 }
-.what-we-do .panel-tab {
+.what-we-do .panel-tab,
+.who-we-are .panel-tab {
   margin: 0;
   padding: .5em;
   display: block;
@@ -527,10 +528,12 @@ footer {
   font-size: 1.4em;
   line-height: 1em;
 }
-.what-we-do .main .tabs-container {
+.what-we-do .main .tabs-container,
+.who-we-are .main .tabs-container {
   padding: 1em 0;
 }
-.what-we-do .main .tabs-container .main-title {
+.what-we-do .main .tabs-container .main-title,
+.who-we-are .main .tabs-container .main-title {
   margin: 0;
   padding: .5em;
   display: block;
@@ -543,14 +546,17 @@ footer {
   text-align: left;
   color: #7079ce;
 }
-.what-we-do .main .tabs-container .panel-group .panel {
+.what-we-do .main .tabs-container .panel-group .panel,
+.who-we-are .main .tabs-container .panel-group .panel {
   background: transparent url("../images/dk-bg.png") repeat;
   margin-bottom: .5em;
 }
-.what-we-do .main .tabs-container .panel-group .panel .panel-heading .panel-title {
+.what-we-do .main .tabs-container .panel-group .panel .panel-heading .panel-title,
+.who-we-are .main .tabs-container .panel-group .panel .panel-heading .panel-title {
   margin: 0;
 }
-.what-we-do .main .tabs-container .panel-group .panel .panel-heading .panel-title .accordion-toggle {
+.what-we-do .main .tabs-container .panel-group .panel .panel-heading .panel-title .accordion-toggle,
+.who-we-are .main .tabs-container .panel-group .panel .panel-heading .panel-title .accordion-toggle {
   margin: 0;
   padding: .5em;
   display: block;
@@ -564,10 +570,12 @@ footer {
   -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
-.what-we-do .main .tabs-container .panel-group .panel .panel-heading .panel-title .accordion-toggle .title {
+.what-we-do .main .tabs-container .panel-group .panel .panel-heading .panel-title .accordion-toggle .title,
+.who-we-are .main .tabs-container .panel-group .panel .panel-heading .panel-title .accordion-toggle .title {
   float: left;
 }
-.what-we-do .main .tabs-container .panel-group .panel .panel-heading .panel-title .accordion-toggle .glyphicon {
+.what-we-do .main .tabs-container .panel-group .panel .panel-heading .panel-title .accordion-toggle .glyphicon,
+.who-we-are .main .tabs-container .panel-group .panel .panel-heading .panel-title .accordion-toggle .glyphicon {
   float: right;
   width: 13px;
   height: 15px;
@@ -578,33 +586,40 @@ footer {
   -o-transition: -o-transform 0.3s ease;
   transition: transform 0.3s ease;
 }
-.what-we-do .main .tabs-container .panel-group .panel .panel-heading .panel-title .accordion-toggle:hover {
+.what-we-do .main .tabs-container .panel-group .panel .panel-heading .panel-title .accordion-toggle:hover,
+.who-we-are .main .tabs-container .panel-group .panel .panel-heading .panel-title .accordion-toggle:hover {
   color: #7079ce;
 }
-.what-we-do .main .tabs-container .panel-group .panel .panel-heading .panel-title .accordion-toggle.collapsed {
+.what-we-do .main .tabs-container .panel-group .panel .panel-heading .panel-title .accordion-toggle.collapsed,
+.who-we-are .main .tabs-container .panel-group .panel .panel-heading .panel-title .accordion-toggle.collapsed {
   color: #5b5d58;
 }
-.what-we-do .main .tabs-container .panel-group .panel .panel-heading .panel-title .accordion-toggle.collapsed .glyphicon {
+.what-we-do .main .tabs-container .panel-group .panel .panel-heading .panel-title .accordion-toggle.collapsed .glyphicon,
+.who-we-are .main .tabs-container .panel-group .panel .panel-heading .panel-title .accordion-toggle.collapsed .glyphicon {
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   transform: rotate(-180deg);
 }
-.what-we-do .main .tabs-container .panel-group .panel .panel-heading .panel-title .accordion-toggle.collapsed:hover {
+.what-we-do .main .tabs-container .panel-group .panel .panel-heading .panel-title .accordion-toggle.collapsed:hover,
+.who-we-are .main .tabs-container .panel-group .panel .panel-heading .panel-title .accordion-toggle.collapsed:hover {
   color: #5b5d58;
 }
-.what-we-do .main .tabs-container .panel-group .panel .panel-body {
+.what-we-do .main .tabs-container .panel-group .panel .panel-body,
+.who-we-are .main .tabs-container .panel-group .panel .panel-body {
   padding: 0 .5em .5em;
 }
-.what-we-do .main .tabs-container .panel-group .panel .panel-body .content {
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .content,
+.who-we-are .main .tabs-container .panel-group .panel .panel-body .content {
   font-size: 1.1em;
   line-height: 1.6em;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
   color: #b2b2b2;
 }
-.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .projects-title {
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .projects-title,
+.who-we-are .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .projects-title {
   color: #9aa5e8;
   font-size: 1.3em;
   line-height: 1em;
@@ -612,14 +627,16 @@ footer {
   text-transform: uppercase;
   text-align: left;
 }
-.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .thumbs-container {
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .thumbs-container,
+.who-we-are .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .thumbs-container {
   margin: .5em 0;
   position: relative;
   width: 100%;
   height: 0;
   overflow: hidden;
 }
-.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .thumbs-container .thumbs-content .thumb-item {
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .thumbs-container .thumbs-content .thumb-item,
+.who-we-are .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .thumbs-container .thumbs-content .thumb-item {
   display: inline-block;
   zoom: 1;
   *display: inline;
@@ -634,31 +651,38 @@ footer {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .thumbs-container .thumbs-content .thumb-item img {
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .thumbs-container .thumbs-content .thumb-item img,
+.who-we-are .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .thumbs-container .thumbs-content .thumb-item img {
   width: 100%;
   height: auto;
 }
-.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .thumbs-container .thumbs-content .thumb-item.active {
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .thumbs-container .thumbs-content .thumb-item.active,
+.who-we-are .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .thumbs-container .thumbs-content .thumb-item.active {
   -webkit-opacity: 1;
   -moz-opacity: 1;
   opacity: 1;
 }
-.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .thumbs-container .ps-scrollbar-x-rail {
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .thumbs-container .ps-scrollbar-x-rail,
+.who-we-are .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .thumbs-container .ps-scrollbar-x-rail {
   background: transparent;
 }
-.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .thumbs-container .ps-scrollbar-x-rail:hover {
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .thumbs-container .ps-scrollbar-x-rail:hover,
+.who-we-are .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .thumbs-container .ps-scrollbar-x-rail:hover {
   background: transparent;
 }
-.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .thumbs-container .ps-scrollbar-x-rail .ps-scrollbar-x {
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .thumbs-container .ps-scrollbar-x-rail .ps-scrollbar-x,
+.who-we-are .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .thumbs-container .ps-scrollbar-x-rail .ps-scrollbar-x {
   height: 5px;
 }
-.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .project-details .blur-container {
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .project-details .blur-container,
+.who-we-are .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .project-details .blur-container {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .project-details .blur-container.blurred {
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .project-details .blur-container.blurred,
+.who-we-are .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .project-details .blur-container.blurred {
   -webkit-filter: blur(5px);
   -moz-filter: blur(5px);
   -ms-filter: blur(5px);
@@ -667,12 +691,14 @@ footer {
   -moz-opacity: 0.3;
   opacity: 0.3;
 }
-.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .project-details .project-item .title {
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .project-details .project-item .title,
+.who-we-are .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .project-details .project-item .title {
   padding: 1em 0;
   margin: 0 0 .5em;
   border-bottom: 1px solid #9aa5e8;
 }
-.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .project-details .project-item .title h2 {
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .project-details .project-item .title h2,
+.who-we-are .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .project-details .project-item .title h2 {
   margin: 0;
   color: #9aa5e8;
   font-family: 'Source Sans Pro', sans-serif;
@@ -681,14 +707,16 @@ footer {
   font-size: 1.3em;
   line-height: 0.8em;
 }
-.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .project-details .project-item .info-container .desc {
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .project-details .project-item .info-container .desc,
+.who-we-are .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .project-details .project-item .info-container .desc {
   font-size: 1.1em;
   line-height: 1.6em;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
   color: #b2b2b2;
 }
-.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .project-details .project-item .info-container.w-logo .client-logo {
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .project-details .project-item .info-container.w-logo .client-logo,
+.who-we-are .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .project-details .project-item .info-container.w-logo .client-logo {
   display: inline-block;
   zoom: 1;
   *display: inline;
@@ -696,16 +724,164 @@ footer {
   width: 20%;
   margin: .2em .2em 0 0;
 }
-.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .project-details .project-item .info-container.w-logo .client-logo img {
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .project-details .project-item .info-container.w-logo .client-logo img,
+.who-we-are .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .project-details .project-item .info-container.w-logo .client-logo img {
   width: 100%;
   max-width: 100%;
 }
-.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .project-details .project-item .info-container.w-logo .desc {
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .project-details .project-item .info-container.w-logo .desc,
+.who-we-are .main .tabs-container .panel-group .panel .panel-body .video-gallery-outer .project-details .project-item .info-container.w-logo .desc {
   display: inline-block;
   zoom: 1;
   *display: inline;
   vertical-align: top;
   width: 77%;
+}
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .team-module,
+.who-we-are .main .tabs-container .panel-group .panel .panel-body .team-module {
+  color: #b2b2b2;
+}
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .team-module .team-members .team-thumbs,
+.who-we-are .main .tabs-container .panel-group .panel .panel-body .team-module .team-members .team-thumbs {
+  text-align: center;
+  padding: 1em 0;
+}
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .team-module .team-members .team-thumbs .team-thumb,
+.who-we-are .main .tabs-container .panel-group .panel .panel-body .team-module .team-members .team-thumbs .team-thumb {
+  width: 4em;
+  margin: .25em;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  vertical-align: top;
+  -webkit-border-radius: 50px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50px;
+  -moz-background-clip: padding;
+  border-radius: 50px;
+  background-clip: padding-box;
+  overflow: hidden;
+  line-height: 0;
+  text-align: center;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .team-module .team-members .team-thumbs .team-thumb img,
+.who-we-are .main .tabs-container .panel-group .panel .panel-body .team-module .team-members .team-thumbs .team-thumb img {
+  width: 100%;
+  height: auto;
+}
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .team-module .team-members .team-thumbs .team-thumb.active,
+.who-we-are .main .tabs-container .panel-group .panel .panel-body .team-module .team-members .team-thumbs .team-thumb.active {
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  -ms-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .team-module .team-members .team-items,
+.who-we-are .main .tabs-container .panel-group .panel .panel-body .team-module .team-members .team-items {
+  position: relative;
+  padding: .5em 0;
+}
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .team-module .team-members .team-items .blur-container,
+.who-we-are .main .tabs-container .panel-group .panel .panel-body .team-module .team-members .team-items .blur-container {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .team-module .team-members .team-items .blur-container.blurred,
+.who-we-are .main .tabs-container .panel-group .panel .panel-body .team-module .team-members .team-items .blur-container.blurred {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+}
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .team-module .team-members .team-items .blur-container .team-item,
+.who-we-are .main .tabs-container .panel-group .panel .panel-body .team-module .team-members .team-items .blur-container .team-item {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  text-align: center;
+  display: none;
+}
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .team-module .team-members .team-items .blur-container .team-item:first-child,
+.who-we-are .main .tabs-container .panel-group .panel .panel-body .team-module .team-members .team-items .blur-container .team-item:first-child {
+  display: block;
+}
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .team-module .team-members .team-items .blur-container .team-item .image,
+.who-we-are .main .tabs-container .panel-group .panel .panel-body .team-module .team-members .team-items .blur-container .team-item .image {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  vertical-align: top;
+  -webkit-border-radius: 100px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 100px;
+  -moz-background-clip: padding;
+  border-radius: 100px;
+  background-clip: padding-box;
+  overflow: hidden;
+}
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .team-module .team-members .team-items .blur-container .team-item .info .credentials,
+.who-we-are .main .tabs-container .panel-group .panel .panel-body .team-module .team-members .team-items .blur-container .team-item .info .credentials {
+  padding: .5em 0;
+}
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .team-module .team-members .team-items .blur-container .team-item .info .credentials .name,
+.who-we-are .main .tabs-container .panel-group .panel .panel-body .team-module .team-members .team-items .blur-container .team-item .info .credentials .name {
+  text-transform: uppercase;
+  font-size: 1.3em;
+  line-height: 1.3em;
+}
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .team-module .team-members .team-items .blur-container .team-item .info .credentials .position,
+.who-we-are .main .tabs-container .panel-group .panel .panel-body .team-module .team-members .team-items .blur-container .team-item .info .credentials .position {
+  text-transform: uppercase;
+  font-size: 1.3em;
+  line-height: 1.3em;
+  color: #7079ce;
+}
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .team-module .team-members .team-items .blur-container .team-item .info .credentials .email,
+.who-we-are .main .tabs-container .panel-group .panel .panel-body .team-module .team-members .team-items .blur-container .team-item .info .credentials .email {
+  border-bottom: 1px solid #7079ce;
+  padding: .5em 0;
+  margin: 0 0 .5em;
+}
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .team-module .team-members .team-items .blur-container .team-item .info .credentials .email a,
+.who-we-are .main .tabs-container .panel-group .panel .panel-body .team-module .team-members .team-items .blur-container .team-item .info .credentials .email a {
+  color: #b2b2b2;
+  text-transform: uppercase;
+}
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .team-module .team-members .team-items .blur-container .team-item .info .credentials .email a:hover,
+.who-we-are .main .tabs-container .panel-group .panel .panel-body .team-module .team-members .team-items .blur-container .team-item .info .credentials .email a:hover {
+  color: #b2b2b2;
+}
+.what-we-do .main .tabs-container .panel-group .panel .panel-body .team-module .team-members .team-items .blur-container .team-item .info .bio,
+.who-we-are .main .tabs-container .panel-group .panel .panel-body .team-module .team-members .team-items .blur-container .team-item .info .bio {
+  font-size: 1.1em;
+  line-height: 1.6em;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  color: #b2b2b2;
+  text-align: left;
+}
+.contact .locations-section .locations .location-item .address-container {
+  display: none;
+}
+.contact .locations-section .map-container {
+  overflow: hidden;
+}
+.contact .locations-section .map-container #map-canvas {
+  height: 400px;
 }
 /* --------------------------------------------------- *\
   CROSSBROWSING
