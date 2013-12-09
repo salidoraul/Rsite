@@ -99,6 +99,137 @@ function loadSpinner(targetElement){
     return spinner;
 }
 
+//GOOGLE MAP API
+////////////////////////////////////////////////
+function initialize_map(lat,lon,bubbleHtml){
+
+    var infoBubble,
+    icon = template_url + '/images/rmp-pin.png';
+
+    // Geolocation function.
+    function geolocation(lat,lon){
+        return new google.maps.LatLng(lat,lon);
+    }
+
+    // Geolocation vars.
+    var loc = geolocation(lat, lon),
+        ibLoc = geolocation( parseFloat(lat) + .0015, lon),
+        centerLoc = geolocation( parseFloat(lat) + .004 , lon);
+
+    // Create an array of styles.
+    var styles = [
+    {
+        "stylers": [
+          { "hue": "#7079ce" },
+          { "saturation": -100 },
+          { "lightness": -5 },
+          { "gamma": 0.90 }
+        ]
+    },{
+        featureType: "road"
+    },
+    {
+        "elementType": "labels.icon",
+        "stylers": [
+          { "hue": "#bf358e" }
+        ]
+    },
+    {
+        "elementType": "labels.text.fill",
+        "stylers": [
+          { "hue": "#bf358e" }
+        ]
+      },{
+        "elementType": "labels.text.stroke",
+        "stylers": [
+          { "hue": "#bf358e" }
+        ]
+      }
+    ];
+
+    // Style the map.
+    var styledMap = new google.maps.StyledMapType(styles,{name: "Styled Map"});
+
+    // Create a map object.
+    var mapOptions = {
+        zoom: 15,
+        scrollwheel: false,
+        center: centerLoc,
+        disableDefaultUI: true,
+        mapTypeControlOptions: {
+        mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+    }
+    };
+    var map = new google.maps.Map(document.getElementById('map-canvas'),
+    mapOptions);
+
+    // Associate the styled map.
+    map.mapTypes.set('map_style', styledMap);
+    map.setMapTypeId('map_style');
+
+    // Set marker.
+    marker = new google.maps.Marker({
+        map: map,
+        draggable: false,
+        position: loc
+    });
+    iconFile = icon;
+    marker.setIcon(iconFile);
+
+    //Custom info bubble content.
+    var bubbleContent = '<div class="info-bubble"><div class="info-bubble-top"><span id="close" class="glyphicon glyphicon-remove"></span></div><div class="info-bubble-content">'+ bubbleHtml +'</div></div>';
+
+    //Construct info bubble.
+    infoBubble = new InfoBubble({
+        maxWidth: 260,
+        map: map,
+        content: bubbleContent,
+        position: ibLoc,
+        shadowStyle: 1,
+        padding: 0,
+        backgroundColor: '#333333',
+        borderWidth: 0,
+        borderRadius: 0,
+        hideCloseButton: true
+    });
+
+    setTimeout(function(){
+        infoBubble.open();
+    },500);
+
+    // Info Bubble controls.
+    setTimeout(function(){
+        google.maps.event.addListener(marker, 'click', function() {
+            if (!infoBubble.isOpen()) {
+
+                infoBubble.open();
+                //Run DOMListeners on re-init.
+                setTimeout(function(){
+                    DOMListeners();
+                },500)
+
+            } else {
+
+                infoBubble.close();
+            }
+        });
+
+        //DOM Listeners function.
+        function DOMListeners(){
+            var close = document.getElementById('close');
+            google.maps.event.addDomListener(close, 'click', function() {
+                infoBubble.close();
+            });
+
+        }
+
+        //Run DOM listeners.
+        DOMListeners();
+
+    },1650);
+
+}
+
 
 
 /* --------------------------------------------------- *\
@@ -126,13 +257,32 @@ $(function(){
         });
     }
 
-    //NAV
+    //AJAX PAGE LOADING
     $('.st-menu a').click(function(){
 
         var url = $(this).attr('href');
-        $('.st-pusher').trigger('click');
 
-        ///////AJAX FUNCTION GOES HERE
+        $('.st-pusher').trigger('click');
+        $.ajax({
+            url: url,
+            beforeSend: function(){
+
+                //SPIN & REMOVE
+                setTimeout(function(){
+                    loadSpinner('ajaxy');
+                    $('.main').addClass('out');
+                },500);
+
+            },
+            success: function(response){
+
+
+
+            },
+            complete: function(){
+
+            }
+        });
 
         return false;
     });
@@ -209,10 +359,15 @@ $(function(){
                             var these_thumbs = $('#thumbs-container-' + service_type + ' .thumb-item'),
                                 count = these_thumbs.size(),
                                 width = these_thumbs.width() + 2.5,
-                                height = these_thumbs.height() + 10,
                                 result = count * width;
                             $('#thumbs-container-' + service_type + ' .thumbs-content').css('width',result);
-                            $('#thumbs-container-' + service_type).animate({height: height}).perfectScrollbar();
+
+                            //HEIGHT ON IMG LOAD
+                            var thumb_obj = these_thumbs.find('img');
+                            thumb_obj.on('load',function(){
+                                var height = these_thumbs.height() + 10;
+                                $('#thumbs-container-' + service_type).animate({height: height}).perfectScrollbar();
+                            });
 
                             //AJAX FOR VIDEO GALLERY PROJECT ///////////////////////////////////////////////
                             $('.thumbs-container .thumb-item').click(function(){
@@ -223,8 +378,9 @@ $(function(){
                                     $(this).addClass('active');
 
                                     //VARS
-                                    var project_id = $(this).attr('href'),
-                                        project_cont = $(this).parent().parent().siblings('.project-details').attr('id'),
+                                    var _this = $(this),
+                                        project_id = _this.attr('href'),
+                                        project_cont = _this.parent().parent().siblings('.project-details').attr('id'),
                                         project_url = base_url + '/what-we-do/?proj=' + project_id + '&auth=y';
 
                                     //GRAB SPECIFIC PROJECT
@@ -249,6 +405,12 @@ $(function(){
 
                                         },
                                         complete: function(){
+
+                                            //SCROLLTO
+                                            setTimeout(function(){
+                                                var os = _this.offset().top;
+                                                animatedScroll(os);
+                                            },500);
 
                                         }
                                     });
@@ -301,144 +463,27 @@ $(function(){
     //CONTACT---------->
     if(window.body.hasClass('contact')){
 
-        //GOOGLE MAP API
-        var infoBubble,
-            icon = template_url + '/images/z-pin.png';
-
-        function initialize_map(lat,lon){
-
-            // Geolocation function.
-            function geolocation(lat,lon){
-                return new google.maps.LatLng(lat,lon);
-            }
-
-            // Geolocation vars.
-            var loc = geolocation(lat, lon),
-                ibLoc = geolocation(lat + 10, lon),
-                centerLoc = geolocation(lat + 15, lon);
-
-            // Create an array of styles.
-            var styles = [
-            {
-                "stylers": [
-                  { "hue": "#7079ce" },
-                  { "saturation": -60 },
-                  { "lightness": -5 },
-                  { "gamma": 0.90 }
-                ]
-            },{
-                featureType: "road"
-            },
-            {
-                "elementType": "labels.icon",
-                "stylers": [
-                  { "hue": "#bf358e" }
-                ]
-            },
-            {
-                "elementType": "labels.text.fill",
-                "stylers": [
-                  { "hue": "#bf358e" }
-                ]
-              },{
-                "elementType": "labels.text.stroke",
-                "stylers": [
-                  { "hue": "#bf358e" }
-                ]
-              }
-            ];
-
-            // Style the map.
-            var styledMap = new google.maps.StyledMapType(styles,{name: "Styled Map"});
-
-            // Create a map object.
-            var mapOptions = {
-                zoom: 15,
-                scrollwheel: false,
-                center: centerLoc,
-                disableDefaultUI: true,
-                mapTypeControlOptions: {
-                mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
-            }
-            };
-            var map = new google.maps.Map(document.getElementById('map-canvas'),
-            mapOptions);
-
-            // Associate the styled map.
-            map.mapTypes.set('map_style', styledMap);
-            map.setMapTypeId('map_style');
-
-            // Set marker.
-            marker = new google.maps.Marker({
-                map: map,
-                draggable: false,
-                position: loc
-            });
-            iconFile = icon;
-            marker.setIcon(iconFile);
-
-            //Custom info bubble content.
-            var bubbleContent = '<div class="info-bubble"><div class="info-bubble-top"><span id="close" class="glyphicon glyphicon-remove"></span><div class="title">title</div><address>address</address></div></div>';
-
-            //Construct info bubble.
-            infoBubble = new InfoBubble({
-                maxWidth: 200,
-                map: map,
-                content: bubbleContent,
-                position: ibLoc,
-                shadowStyle: 1,
-                padding: 0,
-                backgroundColor: '#333333',
-                borderWidth: 0,
-                borderRadius: 5,
-                hideCloseButton: true
-            });
-
-            setTimeout(function(){
-                infoBubble.open();
-            },1500);
-
-            // Info Bubble controls.
-            setTimeout(function(){
-                google.maps.event.addListener(marker, 'click', function() {
-                    if (!infoBubble.isOpen()) {
-
-                        infoBubble.open();
-                        //Run DOMListeners on re-init.
-                        setTimeout(function(){
-                            DOMListeners();
-                        },500)
-
-                    } else {
-
-                        infoBubble.close();
-                    }
-                });
-
-                //DOM Listeners function.
-                function DOMListeners(){
-                    var close = document.getElementById('close');
-                    google.maps.event.addDomListener(close, 'click', function() {
-                        infoBubble.close();
-                    });
-
-                }
-
-                //Run DOM listeners.
-                DOMListeners();
-
-            },1650);
-
-        }
-
         //SERVE MAPS BASED ON LOCATIONS
         $('.location-item').click(function(){
 
-            var lat_lon = $(this).attr('data-filter').split(',');
-            initialize_map(lat_lon[0],lat_lon[1]);
+            var lat_lon = $(this).attr('data-filter').split(','),
+                address = $(this).find('.address-container').html(),
+                offset = $(this).offset().top;
 
+            if( !$(this).hasClass('active') ){
+                $('.locations .location-item').removeClass('active');
+                $(this).addClass('active');
+
+                //SLIDE
+                $('.map-slider').addClass('slide');
+
+                setTimeout(function(){
+                    initialize_map(lat_lon[0],lat_lon[1],address);
+                    animatedScroll(offset);
+                    $('.map-slider').removeClass('slide');
+                },500);
+            }
         });
-
     }
 
 });
@@ -463,6 +508,17 @@ $(window).on('load',function(){
         resize(window.win_width);
 
     });
+
+    //CONTACT---------->
+    if(window.body.hasClass('contact')){
+
+        //INITIALIZE PHX
+        var phx_coor = $('.phx.location-item').attr('data-filter').split(','),
+            phx_address = $('.phx.location-item').find('.address-container').html();
+
+        $('.phx.location-item').addClass('active');
+        initialize_map(phx_coor[0],phx_coor[1],phx_address);
+    }
 
 });
 

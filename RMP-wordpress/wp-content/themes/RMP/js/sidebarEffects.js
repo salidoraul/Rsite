@@ -33,6 +33,9 @@
 			eventtype = mobilecheck() ? 'touchstart' : 'click',
 			resetMenu = function() {
 				classie.remove( container, 'st-menu-open' );
+                setTimeout(function(){
+                    $('.st-container').css('height','auto');
+                },1000);
 			},
 			bodyClickFn = function(evt) {
 				if( !hasParentClass( evt.target, 'st-menu' ) ) {
@@ -50,6 +53,7 @@
 				container.className = 'st-container'; // clear
 				classie.add( container, effect );
 				setTimeout( function() {
+                    $('.st-container').css('height','100%');
 					classie.add( container, 'st-menu-open' );
 				}, 25 );
 				document.addEventListener( eventtype, bodyClickFn );

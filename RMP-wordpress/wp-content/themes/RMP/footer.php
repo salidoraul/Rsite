@@ -1,3 +1,4 @@
+            </div><!-- ajaxy -->
             </section><!-- outer-container -->
             <!-- FOOTER -->
             <footer>

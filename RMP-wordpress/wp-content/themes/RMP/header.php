@@ -96,7 +96,7 @@ $x_browser_classes = html_classes( $browser->getBrowser(),$browser->getPlatform(
                     <div class="header-wrapper clearfix">
                         <!--LEFT-->
                         <div class="left-header">
-                            <a href="<?php bloginfo('url'); ?>" class="header-logo">
+                            <a href="<?php bloginfo('url'); ?>/home" class="header-logo">
                                 <img src="<?php bloginfo('template_url'); ?>/images/rmp-sun.png" alt="RMP"/>
                             </a>
                             <div id="st-trigger-effects" class="column nav-btn">
@@ -143,4 +143,5 @@ $x_browser_classes = html_classes( $browser->getBrowser(),$browser->getPlatform(
                 </header>
 
                 <section class="outer-container">
+                <div id="ajaxy">
                 <!--MAIN-->

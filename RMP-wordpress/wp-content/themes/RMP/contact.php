@@ -9,7 +9,7 @@ get_header(); ?>
 <section class="main">
 
     <div class="information-section">
-        <h1>We're Here For You</h1>
+        <h1 class="info-title">We're Here For You</h1>
         <div class="info-container">
             <?php
             //ARGUMENTS FOR CONTACT INFO
@@ -33,10 +33,12 @@ get_header(); ?>
 
                 <div class="info-item">
                     <h3><?= $title ?></h3>
-                    <div class="info"><?= $info ?></div>
-                    <a class="phone phone-link" href="tel:<?= $phone ?>"><?= $phone ?></a>
-                    | M <a class="mobile phone-link" href="<?= $mobile ?>"><?= $mobile ?></a>
-                    <a class="email" href="mailto:<?= $email ?>"><?= $email ?></a>
+                    <div class="info-wrapper">
+                        <div class="info"><?= $info ?></div>
+                        <a class="phone phone-link" href="tel:<?= $phone ?>"><?= $phone ?></a>
+                        | M <a class="mobile phone-link" href="<?= $mobile ?>"><?= $mobile ?></a>
+                        <a class="email" href="mailto:<?= $email ?>"><?= $email ?></a>
+                    </div>
                 </div>
 
             <?php
@@ -61,6 +63,7 @@ get_header(); ?>
                 setup_postdata($post);
 
                 //FIELDS
+                $slug = the_slug();
                 $title = get_the_title();
                 $address = get_pods_field('locations','address');
                 $phone = get_pods_field('locations','phone');
@@ -70,7 +73,7 @@ get_header(); ?>
                 $lat_long = get_pods_field('locations','lat_long');
             ?>
 
-                <div class="location-item" data-filter="<?= $lat_long ?>">
+                <div class="<?= $slug ?> location-item" data-filter="<?= $lat_long ?>">
                     <div class="title"><?= $title ?></div>
                     <div class="address-container">
                         <div class="address"><?= $address ?></div>
@@ -92,7 +95,9 @@ get_header(); ?>
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2oIP9_kISo93_2UVT4QfJGzEFOE-cmyM&sensor=false"></script>
         <script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/infobubble-compiled.js"></script>
         <div class="map-container">
-            <div id="map-canvas"></div>
+            <div class="map-slider">
+                <div id="map-canvas"></div>
+            </div>
         </div>
     </div>
 

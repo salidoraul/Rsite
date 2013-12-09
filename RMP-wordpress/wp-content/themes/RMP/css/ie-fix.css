@@ -312,6 +312,12 @@ textarea {
   font-weight: 300;
   color: #b2b2b2;
 }
+.the-title {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 1.4em;
+  line-height: 1em;
+}
 .st-menu {
   width: 15em;
   background: transparent url("../images/dk-bg.png") repeat;
@@ -476,9 +482,21 @@ section.main {
   width: 100%;
   width: 1000px;
   margin: 0 auto;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+section.main.out {
+  position: relative;
+  left: -120%;
 }
 footer {
   display: none;
+}
+.ajaxy {
+  position: relative;
+  overflow: hidden;
 }
 .home .outer-container {
   padding-top: 2em;
@@ -874,14 +892,135 @@ footer {
   color: #b2b2b2;
   text-align: left;
 }
+.contact .outer-container {
+  padding: 0;
+}
+.contact .information-section {
+  background: transparent url("../images/dk-bg.png") repeat;
+  padding: 1em;
+  margin: 1em 0 0;
+}
+.contact .information-section .info-title {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 1.4em;
+  line-height: 1em;
+  color: #7079ce;
+  margin: 0;
+  padding: 1em 0;
+}
+.contact .information-section .info-container .info-item {
+  padding: 1em 0;
+  border-top: 1px solid #5b5d58;
+}
+.contact .information-section .info-container .info-item h3 {
+  margin: 0 0 1em;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+  line-height: 1em;
+}
+.contact .information-section .info-container .info-item .info-wrapper {
+  font-size: 1.1em;
+  line-height: 1.6em;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  color: #b2b2b2;
+}
+.contact .information-section .info-container .info-item .info-wrapper .info strong {
+  display: block;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.contact .locations-section {
+  background: transparent url("../images/dk-bg.png") repeat;
+}
+.contact .locations-section .locations {
+  padding: 1em;
+  text-align: center;
+}
+.contact .locations-section .locations .location-item {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  vertical-align: middle;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 1.4em;
+  font-size: 2em;
+  line-height: 1em;
+  margin: 0 1em;
+  padding: 0 0 .25em;
+  border-bottom: 3px solid transparent;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
 .contact .locations-section .locations .location-item .address-container {
   display: none;
 }
-.contact .locations-section .map-container {
+.contact .locations-section .locations .location-item.active {
+  color: #7079ce;
+  border-color: #7079ce;
+}
+.contact .map-container {
   overflow: hidden;
 }
-.contact .locations-section .map-container #map-canvas {
+.contact .map-container .map-slider {
+  position: relative;
+  top: 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.contact .map-container .map-slider.slide {
+  top: -450px;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+}
+.contact .map-container .map-slider #map-canvas {
   height: 400px;
+}
+.contact .info-bubble .info-bubble-top {
+  padding: .5em;
+  text-align: right;
+  border-bottom: 1px solid #5b5d58;
+}
+.contact .info-bubble .info-bubble-top span {
+  cursor: pointer;
+  color: #7079ce;
+  font-family: 'Glyphicons Halflings';
+}
+.contact .info-bubble .info-bubble-content {
+  padding: 1em;
+  text-align: center;
+}
+.contact .info-bubble .info-bubble-content * {
+  color: #b2b2b2;
+}
+.contact .info-bubble .info-bubble-content .address,
+.contact .info-bubble .info-bubble-content .phone,
+.contact .info-bubble .info-bubble-content .email {
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-weight: 300 !important;
+  font-size: 16px !important;
+  line-height: 20px !important;
+}
+.contact .info-bubble .info-bubble-content .address {
+  margin: 0 0 .5em;
+}
+.contact .info-bubble .info-bubble-content .phone {
+  display: block;
+}
+.contact .info-bubble .info-bubble-content .phone:hover {
+  color: #b2b2b2 !important;
+}
+.contact .info-bubble .info-bubble-content .email {
+  color: #9aa5e8;
 }
 /* --------------------------------------------------- *\
   CROSSBROWSING

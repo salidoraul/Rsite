@@ -19,6 +19,12 @@
   color: @lt-grey;
 }
 
+.the-title{
+  .text-sep;
+  text-transform: uppercase;
+  .font-size(1.4em,1em);
+}
+
 //OFF-CANVAS NAV
 
 .st-menu{
@@ -185,10 +191,21 @@ header{
 
 section.main{
   .wrapper;
+  .lh-transition(all .5s ease);
+
+  &.out{
+    position: relative;
+    left: -120%;
+  }
 }
 
 footer{
   display: none;
+}
+
+.ajaxy{
+  position: relative;
+  overflow: hidden;
 }
 
 //HOME
@@ -248,9 +265,7 @@ footer{
     margin: 0;
     padding: .5em;
     display: block;
-    .text-sep;
-    text-transform: uppercase;
-    .font-size(1.4em,1em);
+    .the-title;
   }
 
   //TABS
@@ -546,44 +561,80 @@ footer{
 
 .contact{
 
+  .outer-container{
+    padding: 0;
+  }
+
   .information-section{
+    .dk-bg;
+    .padding;
+    margin: 1em 0 0;
 
-    h1{
-
+    .info-title{
+      .the-title;
+      color: @purple;
+      margin: 0;
+      padding: 1em 0;
     }
 
     .info-container{
 
       .info-item{
+        padding: 1em 0;
+        border-top: 1px solid @grey;
 
         h3{
-
+          margin: 0 0 1em;
+          text-align: left;
+          text-transform: uppercase;
+          .text-sep;
+          .font-size(1.2em,1em);
         }
 
-        .info{
+        .info-wrapper{
+          .content-text;
+          color: @lt-grey;
 
-        }
+          .info{
 
-        .phone{
+            strong{
+              display: block;
+              text-transform: uppercase;
+              font-weight: 300;
+            }
+          }
 
-        }
+          .phone{
 
-        .mobile{
+          }
 
-        }
+          .mobile{
 
-        .email{
+          }
 
+          .email{
+
+          }
         }
       }
     }
   }
 
   .locations-section{
+    .dk-bg;
 
     .locations{
+      .padding;
+      text-align: center;
 
       .location-item{
+        .inline(middle);
+        .the-title;
+        .font-size(2em,1em);
+        margin: 0 1em;
+        padding: 0 0 .25em;
+        border-bottom: 3px solid transparent;
+        .lh-transition(all .3s ease);
 
         .title{
 
@@ -592,18 +643,27 @@ footer{
         .address-container{
           display: none;
         }
+
+        &.active{
+          color: @purple;
+          border-color: @purple;
+        }
       }
     }
   }
 
-  .locations-section{
+  .map-container{
+    overflow: hidden;
 
-    .locations{
+    .map-slider{
+      position: relative;
+      top: 0;
+      .lh-transition(all .3s ease);
 
-    }
-
-    .map-container{
-      overflow: hidden;
+      &.slide{
+        top: -450px;
+        .lh-opacity(0);
+      }
 
       #map-canvas{
         height: 400px;
@@ -611,6 +671,54 @@ footer{
     }
   }
 
+  //INFO BUBBLE
+  .info-bubble{
+
+    .info-bubble-top{
+      padding: .5em;
+      text-align: right;
+      border-bottom: 1px solid @grey;
+
+      span{
+        cursor: pointer;
+        color: @purple;
+        font-family: 'Glyphicons Halflings';
+      }
+    }
+
+    .info-bubble-content{
+      .padding;
+      text-align: center;
+
+      *{
+        color: @lt-grey;
+      }
+
+      .address,
+      .phone,
+      .email{
+        .source(300) !important;
+        font-size: 16px !important;
+        line-height: 20px !important;
+      }
+
+      .address{
+        margin: 0 0 .5em;
+      }
+
+      .phone{
+        display: block;
+
+        &:hover{
+          color: @lt-grey !important;
+        }
+      }
+
+      .email{
+        color: @lt-purple;
+      }
+    }
+  }
 }
 
 /* --------------------------------------------------- *\
