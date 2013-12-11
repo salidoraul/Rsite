@@ -257,7 +257,7 @@ $(function(){
         });
     }
 
-    //AJAX PAGE LOADING
+    //AJAX PAGE LOADING /////////////
     $('.st-menu a').click(function(){
 
         var url = $(this).attr('href');
@@ -266,6 +266,8 @@ $(function(){
         $.ajax({
             url: url,
             beforeSend: function(){
+
+                window.previous_slug = $('meta[name="the-slug"]').attr('content');
 
                 //SPIN & REMOVE
                 setTimeout(function(){
@@ -276,8 +278,24 @@ $(function(){
             },
             success: function(response){
 
+                setTimeout(function(){
 
+                    var slug = $(response).find('meta[name="the-slug"]').attr('content'),
+                        title = $(response).find('title').text(),
+                        html = $(response).find('.main').html();
 
+                    //REMOVE SPIN
+                    $('.spinner').remove();
+                    //ADD ITEMS
+                    console.log(html);
+                    console.log(window.previous_slug);
+                    console.log(slug);
+                    console.log(title);
+
+                    document.title = title;
+                    $('body').removeClass(window.previous_slug).addClass(slug);
+                    $('#ajaxy').html(html);
+                },750);
             },
             complete: function(){
 

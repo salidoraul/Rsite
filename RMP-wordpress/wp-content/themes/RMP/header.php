@@ -50,6 +50,7 @@ $x_browser_classes = html_classes( $browser->getBrowser(),$browser->getPlatform(
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="template-url" content="<?php bloginfo('template_url'); ?>">
     <meta name="base-url" content="<?php bloginfo('url'); ?>">
+    <meta name="the-slug" content="<?= $slug ?>">
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
