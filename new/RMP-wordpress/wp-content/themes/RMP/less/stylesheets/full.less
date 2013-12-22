@@ -1,0 +1,183 @@
+/* --------------------------------------------------- *\
+  FULL
+\* --------------------------------------------------- */
+
+//SHARED
+
+
+
+//OFF-CANVAS NAV
+.st-menu{
+  width: 20em;
+
+  .nav-wrapper{
+    padding: 1em 0;
+
+    .nav-logo{
+      padding: 0 1em;
+    }
+
+    #menu-main{
+
+      .menu-item{
+        padding: 0;
+
+        a{
+          display: block;
+          padding: .8em 0;
+          border-left: 3px solid transparent;
+          .lh-transition(all .3s ease);
+
+          &:hover{
+            border-color: @purple;
+            padding-left: .5em;
+          }
+        }
+
+        .sub-menu{
+
+          .menu-item{
+
+            a{
+              padding: .5em 0;
+
+              &:hover{
+                border-color: @grey;
+                padding-left: .5em;
+              }
+            }
+          }
+        }
+      }
+
+      .menu-item-has-children{
+        padding: 1em 0 0;
+      }
+    }
+  }
+}
+
+.st-effect-6.st-menu-open .st-pusher {
+
+}
+
+//TEMPLATE
+
+.wrapper{
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.outer-container{
+  padding: 0;
+}
+
+header{
+  position: fixed;
+  width: 100%;
+
+  .header-wrapper{
+    .wrapper;
+
+    .left-header{
+
+      .header-logo{
+
+        img{
+
+        }
+      }
+
+      .nav-btn{
+
+        .menu-icon{
+
+          div{
+
+          }
+        }
+
+        .menu-title{
+
+        }
+      }
+    }
+
+    .right-header{
+
+      .header-contact{
+
+        a{
+
+          &.active{
+
+          }
+        }
+      }
+    }
+  }
+
+  .header-contact-links{
+
+    .contact-links-wrapper{
+      .wrapper;
+
+      .contact-tip{
+
+        a{
+
+          &:hover{
+
+          }
+        }
+      }
+    }
+  }
+}
+
+section.main{
+  .wrapper;
+}
+
+footer{
+
+}
+
+//HOME
+
+.home{
+
+  .outer-container{
+    padding-top: 20em;
+  }
+
+  .hero-container{
+
+    .hero-logo{
+
+    }
+
+    .hero-slogan{
+
+    }
+  }
+
+  .home-nav{
+
+    a{
+      border-bottom: 3px solid transparent;
+      .lh-transition(all .3s ease);
+
+      &:hover{
+        color: @lt-purple;
+        border-color: @lt-purple;
+      }
+    }
+  }
+}
+
+
+/* --------------------------------------------------- *\
+  CROSSBROWSING
+\* --------------------------------------------------- */
+

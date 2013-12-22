@@ -1,0 +1,301 @@
+/* --------------------------------------------------- *\
+  RESET
+\* --------------------------------------------------- */
+
+
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption,
+th,
+td {
+  font-weight: normal;
+  text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+}
+html {
+  overflow-y: scroll;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+*:focus{
+  outline: none;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+audio:not([controls]) {
+  display: none;
+}
+del {
+  color: #333;
+}
+ins {
+  background: #fff9c0;
+  text-decoration: none;
+}
+hr {
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  margin: 0;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+small {
+  font-size: smaller;
+}
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+
+
+/* --------------------------------------------------- *\
+  SHARED
+\* --------------------------------------------------- */
+
+
+
+//COLORS
+
+@white: #ffffff;
+@lt-grey: #B2B2B2;
+@grey: #5B5D58;
+@black: #000000;
+
+@lt-purple: #9AA5E8;
+@purple: #7079CE;
+
+//FONTS
+
+@import url(http://fonts.googleapis.com/css?family=Fjalla+One);
+.fjalla(@weight:300){//300
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: @weight;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700,300italic,400italic,700italic);
+.source(@weight:300){//300,400,700
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: @weight;
+}
+
+.dk-bg{
+  background: transparent url("../images/dk-bg.png") repeat;
+}
+
+//BASE
+
+html, body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  background: @black;
+}
+
+body{
+  .fjalla();
+  color: @grey;
+  .font-size();
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  text-align: center;
+  margin: .5em 0;
+}
+
+strong {
+    font-weight: 700;
+}
+
+a {
+  color: @purple;
+
+  img {
+      border: 0;
+  }
+
+  &:hover, &:focus{
+    text-decoration: none;
+    color: @lt-purple;
+  }
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+hr {
+  display: block;
+  clear: both;
+}
+
+p{
+  margin: 1.5em 0;
+}
+
+div.para{
+  display: block;
+  margin: 1.5em 0;
+  font-size: 1.5em;
+}
+
+//ALIGNS
+
+.align-left{text-align: left;}
+.align-center{text-align: center;}
+.align-right{text-align: right;}
+
+//FLOATS
+
+.left{ float: left; }
+.right{ float: right; }
+.clear{ clear: both; }
+
+//FORMS
+
+::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input, select, textarea {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+//SELECTION
+
+::selection {
+  background: @lt-purple;
+  color: @white;
+  text-shadow: none;
+}
+::-moz-selection {
+  background: @lt-purple;
+  color: @white;
+  text-shadow: none;
+}
+
+//PHONE LINK
+
+.phone-link{
+  text-decoration: none !important;
+  color: inherit;
+  cursor: default !important;
+
+  &:hover{
+    color: inherit !important;
+  }
+}
+
+//GLOBAL MIXINS
+
+.font-size(@font:0.875em,@line:1em){
+  font-size: @font;
+  line-height: @line;
+}
+
+.inline(@vertical-align:top){
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  vertical-align: @vertical-align;
+}
+
+.text-gradient(@color1, @color2){//WEBKIT ONLY
+  color: @color2;//FALLBACK
+  background: -webkit-linear-gradient(@color1, @color2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hr-color(@top-color, @bottom-color){
+  border-top: 1px inset @top-color;
+  background-color: @bottom-color;
+}
+
+.text-shadow-top(@color){
+  text-shadow: 0px -1px 0px @color;
+}
+
+.text-shadow-bottom(@color){
+  text-shadow: 0px 1px 0px @color;
+}
+
+//.button(@color:@white,@rounded:5px){
+//  cursor: pointer;
+//  .inline();
+//  padding: .5em;
+//  border: none;
+//  .oswald(700);
+//  color: @color;
+//  text-align: center;
+//  .transition(all 1s ease-in);
+//}
