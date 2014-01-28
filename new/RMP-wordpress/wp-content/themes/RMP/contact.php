@@ -92,7 +92,6 @@ get_header(); ?>
         </div>
 
         <!-- GOOGLE MAP -->
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2oIP9_kISo93_2UVT4QfJGzEFOE-cmyM&sensor=false"></script>
         <script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/infobubble-compiled.js"></script>
         <div class="map-container">
             <div class="map-slider">

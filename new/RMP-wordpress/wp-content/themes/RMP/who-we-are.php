@@ -32,7 +32,7 @@ get_header(); ?>
                 <div class="panel">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a class="accordion-toggle collapsed clearfix <?= $panel_slug ?>" data-toggle="collapse" data-parent="#services" href="#<?= $panel_slug ?>" ajax-data="<?= $panel_slug ?>">
+                            <a class="accordion-toggle collapsed clearfix <?= $panel_slug ?> <?php if($panel_slug == 'team'){echo 'with-window';} ?>" data-toggle="collapse" data-parent="#services" href="#<?= $panel_slug ?>" ajax-data="<?= $panel_slug ?>">
                                 <span class="title"><?= $title ?></span>
                                 <span class="glyphicon glyphicon-chevron-up"></span>
                             </a>
@@ -79,7 +79,7 @@ get_header(); ?>
                                         wp_reset_postdata();?>
                                     </div>
 
-                                    <div class="team-items">
+                                    <div class="team-items right-window">
                                         <div class="blur-container">
                                             <?php //LOOP AGAIN
 

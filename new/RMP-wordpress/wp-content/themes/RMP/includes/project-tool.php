@@ -19,7 +19,8 @@ if ($auth == 'y') :
 
     //ADD SERVICE TO PRODUCTS OBJECTS
     foreach( $posts as $post ){
-        $service = get_pods_field('projects','service')['post_name'];
+        $service_array = get_pods_field('projects','service');
+        $service = $service_array['post_name'];
         $post->service = $service;
     }
 

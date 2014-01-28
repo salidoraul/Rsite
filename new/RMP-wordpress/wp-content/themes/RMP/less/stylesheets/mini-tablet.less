@@ -7,12 +7,16 @@
 
 
 //OFF-CANVAS NAV
-.st-menu{
+
+.off-canvas-nav{
 
   .nav-wrapper{
 
-    .nav-logo{
+    .nav-logo-link{
 
+      .nav-logo{
+
+      }
     }
 
     #menu-main{
@@ -47,31 +51,37 @@
   }
 }
 
-.st-effect-6.st-menu-open .st-pusher {
-
-}
-
-
-
-//TEMPLATE
-
-
-
 .outer-container{
 
 }
 
+//OPEN NAV
+.menu-open{
+
+  body{
+
+  }
+
+  .off-canvas-nav{
+
+  }
+
+  .outer-container{
+
+  }
+}
+
+//TEMPLATE
+
 header{
 
   .header-wrapper{
+    .wrapper;
 
     .left-header{
 
       .header-logo{
 
-        img{
-
-        }
       }
 
       .nav-btn{
@@ -81,10 +91,6 @@ header{
           div{
 
           }
-        }
-
-        .menu-title{
-
         }
       }
     }
@@ -128,38 +134,418 @@ footer{
 
 }
 
+#ajaxy{
+
+  &.out .main{
+
+  }
+
+  &.in .main{
+
+  }
+}
+
 //HOME
 
 .home{
 
-  .outer-container{
-    padding: 5em 0 0;
+  #ajaxy{
+
   }
 
   .hero-container{
-    margin: 0 auto;
-    max-width: 28em;
 
     .hero-logo{
 
     }
 
     .hero-slogan{
-      .font-size(1.4em,1.6em);
+
     }
   }
 
   .home-nav{
-    max-width: 28em;
-    margin-top: 5em;
 
     a{
-      .font-size(1.8em,1em);
+
+    }
+  }
+}
+
+//WHAT WE DO & WHO WE ARE
+
+.what-we-do, .who-we-are{
+
+  //SHARED
+
+  .panel-tab{
+
+  }
+
+  //TABS
+
+  .main{
+
+    .tabs-container{
+
+      .main-title{
+
+      }
+
+      .panel-group{
+
+        .panel{
+
+          .panel-heading{
+
+            .panel-title{
+
+              .accordion-toggle{
+
+                .title{
+
+                }
+
+                .glyphicon{
+
+                }
+
+                &:hover{
+
+                }
+
+                &.collapsed{
+
+                  .glyphicon{
+
+                  }
+
+                  &:hover{
+
+                  }
+
+                }
+              }
+            }
+          }
+
+          .panel-body{
+
+            .content{
+
+            }
+
+            //VIDEO GALLERY
+            .video-gallery-outer{
+
+              .projects-title{
+
+              }
+
+              .thumbs-container{
+
+                .thumbs-content{
+
+                  .thumb-item{
+
+                    img{
+
+                    }
+
+                    &.active{
+
+                    }
+                  }
+                }
+
+                .ps-scrollbar-x-rail{
+
+                  &:hover{
+
+                  }
+
+                  .ps-scrollbar-x{
+
+                  }
+                }
+              }
+
+              .project-details{
+
+                .blur-container{
+
+                  &.blurred{
+
+                  }
+                }
+
+                .project-item{
+
+                  .video-container{
+
+                  }
+
+                  .title{
+
+                    h2{
+
+                    }
+                  }
+
+                  .info-container{
+
+                    .desc{
+
+                    }
+
+                    &.w-logo{
+
+                      .client-logo{
+
+                        img{
+
+                        }
+                      }
+
+                      .desc{
+
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            //TEAM
+            .team-module{
+
+              .team-members{
+
+                .team-thumbs{
+
+                  .team-thumb{
+
+                    img{
+
+                    }
+
+                    &.active{
+
+                    }
+                  }
+                }
+
+                .team-items{
+
+                  .blur-container{
+
+                    &.blurred{
+
+                    }
+
+                    .team-item{
+
+                      &:first-child{
+
+                      }
+
+                      .image{
+
+                      }
+
+                      .info{
+
+                        .credentials{
+
+                          .name{
+
+                          }
+
+                          .position{
+
+                          }
+
+                          .email{
+
+                            a{
+
+                              &:hover{
+
+                              }
+                            }
+                          }
+                        }
+
+                        .bio{
+
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//CONTACT
+
+.contact{
+
+  #ajaxy{
+
+  }
+
+  .information-section{
+
+    .info-title{
+
+    }
+
+    .info-container{
+
+      .info-item{
+
+        h3{
+
+        }
+
+        .info-wrapper{
+
+          .info{
+
+            strong{
+
+            }
+          }
+
+          .phone{
+
+          }
+
+          .mobile{
+
+          }
+
+          .email{
+
+          }
+        }
+      }
     }
   }
 
+  .locations-section{
+
+    .locations{
+
+      .location-item{
+
+        .title{
+
+        }
+
+        .address-container{
+
+        }
+
+        &.active{
+
+        }
+      }
+    }
+  }
+
+  .map-container{
+
+    .map-slider{
+
+      &.slide{
+
+      }
+
+      #map-canvas{
+
+      }
+    }
+  }
+
+  //INFO BUBBLE
+  .info-bubble{
+
+    .info-bubble-top{
+
+      span{
+
+      }
+    }
+
+    .info-bubble-content{
+
+      *{
+
+      }
+
+      .address,
+      .phone,
+      .email,
+      .directions{
+
+      }
+
+      .address{
+
+      }
+
+      .phone{
+
+        &:hover{
+
+        }
+      }
+
+      .email{
+
+      }
+
+      .directions{
+
+      }
+    }
+  }
 }
 
 /* --------------------------------------------------- *\
   CROSSBROWSING
 \* --------------------------------------------------- */
+
+
+.home{
+
+  .outer-container{
+
+  }
+
+  .hero-container{
+
+    .hero-logo{
+
+    }
+
+    .hero-slogan{
+
+    }
+  }
+
+  .home-nav{
+
+    a{
+
+    }
+  }
+
+}

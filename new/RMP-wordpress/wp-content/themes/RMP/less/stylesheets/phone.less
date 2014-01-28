@@ -25,23 +25,62 @@
   .font-size(1.4em,1em);
 }
 
+.curtain{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
 //OFF-CANVAS NAV
 
-.st-menu{
-  width: 15em;
+.off-canvas-nav{
+  width: 18em;
+  height: 100%;
+  position: absolute;
+  left: -18em;
   .dk-bg;
+  .lh-transition(all .3s ease);
+
 
   .nav-wrapper{
-    height: 100%;
-    .padding;
+    padding: 0 2em;
 
-    .nav-logo{
-      margin: 0 0 1em 0;
+    .nav-logo-link{
+      .inline();
+      padding: 1em 0 0;
+
+      .nav-logo{
+        margin: 0 0 1em 0;
+        width: 100%;
+      }
+    }
+
+    .menu-main-container{
+      position: relative;
+      overflow-y: hidden;
+      height: 300px;
+
+      .ps-scrollbar-x-rail{
+        display: none !important;
+      }
+      .ps-scrollbar-y-rail{
+        background: transparent;
+
+        &:hover{
+          background: transparent;
+        }
+
+        .ps-scrollbar-y{
+          width: 5px;
+        }
+      }
     }
 
     #menu-main{
       text-align: center;
       text-transform: uppercase;
+      padding: 0 0 1em;
 
       .menu-item{
         .font-size(1.4em,1.4em);
@@ -78,9 +117,52 @@
   }
 }
 
-.st-effect-6.st-menu-open .st-pusher {
-	-webkit-transform: translate3d(200px, 0, 0) rotateY(-15deg);
-	transform: translate3d(200px, 0, 0) rotateY(-15deg);
+.nav-cover{
+  position: absolute;
+  z-index: 0;
+  width: 0;
+  height: 0;
+  background: transparent;
+}
+
+.outer-container{
+  position: relative;
+  height: 100%;
+}
+
+//OPEN NAV
+.menu-open{
+
+  body{
+    overflow: hidden;
+    position: relative;
+  }
+
+  .off-canvas-nav{
+    left: 0;
+    z-index: 9999;
+    .lh-box-shadow(0 10px 25px @black);
+  }
+
+  .nav-cover{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .outer-container{
+    z-index: 0;
+  }
+}
+
+.height-control{
+  height: 100%;
+  overflow-x: hidden;
+
+  body{
+    height: 100%;
+  }
 }
 
 //TEMPLATE
@@ -90,8 +172,12 @@
   width: 100%;
 }
 
-.outer-container{
+#ajaxy{
   padding: 0 1em;
+
+  .page-slug{
+    display: none !important;
+  }
 }
 
 header{
@@ -100,10 +186,10 @@ header{
 
   .header-wrapper{
     .wrapper;
-    padding: .5em;
 
     .left-header{
       .left;
+      padding: .5em 0 .5em 1em;
 
       .header-logo{
         .inline(middle);
@@ -121,29 +207,34 @@ header{
 
         .menu-icon{
           .inline(middle);
-          width: 1.5em;
+          width: 2em;
           margin: 0 .5em 0 0;
 
           div{
             width: 100%;
             height: 3px;
-            margin-bottom: 3px;
+            margin-bottom: 4px;
             background: @purple;
           }
         }
 
         .menu-title{
+          visibility: hidden;
           .inline(middle);
-          .font-size(1.2em,1em);
+          .font-size(1.6em,1em);
           text-transform: uppercase;
           color: @purple;
         }
+      }
+
+      .loop-btn{
+        display: none;
       }
     }
 
     .right-header{
       .right;
-      padding: .3em 0;
+      padding: .8em 1em .5em 0;
       cursor: pointer;
 
       .header-contact{
@@ -191,28 +282,30 @@ header{
 
 section.main{
   .wrapper;
-  .lh-transition(all .5s ease);
-
-  &.out{
-    position: relative;
-    left: -120%;
-  }
+  position: relative;
 }
 
 footer{
   display: none;
 }
 
-.ajaxy{
+#ajaxy{
   position: relative;
-  overflow: hidden;
+
+  &.out .main{
+    left: -120%;
+  }
+
+  &.in .main{
+    left: 120%;
+  }
 }
 
 //HOME
 
 .home{
 
-  .outer-container{
+  #ajaxy{
     padding-top: 2em;
   }
 
@@ -469,6 +562,7 @@ footer{
                     text-align: center;
                     .lh-grayscale(100%);
                     .lh-transition(all .5s ease);
+                    border: 2px solid transparent;
 
                     img{
                       width: 100%;
@@ -477,6 +571,7 @@ footer{
 
                     &.active{
                       .lh-grayscale(0%);
+                      border-color: @purple;
                     }
                   }
                 }
@@ -504,6 +599,7 @@ footer{
 
                       .image{
                         .inline();
+                        width: 10em;
                         .lh-border-radius(100px);
                         overflow: hidden;
                       }
@@ -561,7 +657,7 @@ footer{
 
 .contact{
 
-  .outer-container{
+  #ajaxy{
     padding: 0;
   }
 
@@ -696,7 +792,8 @@ footer{
 
       .address,
       .phone,
-      .email{
+      .email,
+      .directions{
         .source(300) !important;
         font-size: 16px !important;
         line-height: 20px !important;
@@ -716,6 +813,15 @@ footer{
 
       .email{
         color: @lt-purple;
+      }
+
+      .directions{
+        display: block;
+        margin: .25em 0 0;
+        padding: .25em;
+        color: @white;
+        background: @purple;
+        text-align: center;
       }
     }
   }
