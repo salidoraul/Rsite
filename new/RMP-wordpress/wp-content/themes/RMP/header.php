@@ -1,10 +1,4 @@
 <?php
-session_start();
-
-//UNIQUE SESSION ID
-if( !isset($_SESSION["session_id"]) ):
-    $_SESSION["session_id"]=uniqid();
-endif;
 
 //SLUG
 $slug = the_slug();
@@ -15,37 +9,9 @@ if($autoP == 0){
     remove_filter('the_content', 'wpautop');
 }
 
-//BROWSER DETECT
-include('includes/browserdetect.class.php');
-include('includes/utility.class.php');
-$html_classesa = new utility();
-$browser = new Browser();
-$mobile = new Mobile_Detect();
-
-function html_classes($browser_name, $browser_platform, $browser_version, $is_mobile = false, $is_tablet = false){
-    $browser_name = lcwords(str_replace(" ","-", $browser_name));
-    $browser_platform = lcwords(str_replace(" ","-", $browser_platform));
-    $browser_platform = ($browser_platform == "apple")?"mac":$browser_platform;
-    $browser_version = explode(".",$browser_version);
-    $browser_version = $browser_version[0];
-    $browser_version = $browser_name."-".$browser_version;
-    $is_mobile = ($is_mobile)?"mobile":"";
-    $is_tablet = ($is_tablet)?"tablet":"";
-    $is_phone = ($is_mobile && !$is_tablet)?"phone":"";
-
-    $html_classes = $browser_name." ".$browser_platform." ".$browser_version." ".$is_phone." ".$is_tablet." ".$is_mobile;
-    return $html_classes;
-}
-
-function lcwords($str){
-    return preg_replace('#\b([a-z])#ie', "strtolower($1)", $str);
-}
-
-$x_browser_classes = html_classes( $browser->getBrowser(),$browser->getPlatform(),$browser->getVersion(),$mobile->isMobile(),$mobile->isTablet());
-
 ?>
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> xmlns="http://www.w3.org/1999/xhtml" class="<?= $x_browser_classes;?>">
+<html <?php language_attributes(); ?> xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="template-url" content="<?php bloginfo('template_url'); ?>">
@@ -70,6 +36,30 @@ $x_browser_classes = html_classes( $browser->getBrowser(),$browser->getPlatform(
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/ie-fix.css" />
     <script src="<?php bloginfo('template_url'); ?>/js/html5.js"></script>
     <![endif]-->
+    
+    <!--CONDITIONIZR-->
+    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/conditionizr.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/detects/chrome.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/detects/chromium.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/detects/firefox.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/detects/ie6.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/detects/ie7.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/detects/ie8.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/detects/ie9.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/detects/ie10.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/detects/ie10touch.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/detects/ie11.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/detects/ios.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/detects/linux.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/detects/mac.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/detects/opera.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/detects/retina.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/detects/safari.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/detects/touch.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/detects/windows.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/detects/winPhone7.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/detects/winPhone75.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/detects/winPhone8.js"></script>
 
 </head>
 

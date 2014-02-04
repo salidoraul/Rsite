@@ -32,6 +32,16 @@
   z-index: 0;
 }
 
+.btn{
+  background: @purple;
+  color: @black;
+
+  &:hover{
+    background: @lt-purple;
+    color: @black;
+  }
+}
+
 //OFF-CANVAS NAV
 
 .off-canvas-nav{
@@ -170,6 +180,10 @@
 .wrapper{
   position: relative;
   width: 100%;
+}
+
+#big-video-wrap{
+  display: none;
 }
 
 #ajaxy{
@@ -374,6 +388,7 @@ footer{
         margin: 0 0 .5em;
         text-align: left;
         color: @purple;
+        .text-shadow-bottom(@lt-purple);
       }
 
       .panel-group{
@@ -600,6 +615,7 @@ footer{
                       .image{
                         .inline();
                         width: 10em;
+                        line-height: 0;
                         .lh-border-radius(100px);
                         overflow: hidden;
                       }
@@ -698,6 +714,18 @@ footer{
               text-transform: uppercase;
               font-weight: 300;
             }
+          }
+
+          a{
+            border-right:1px solid @lt-grey;
+            .inline();
+            padding: 0 .5em 0 0;
+            margin: 0 .5em 0 0;
+
+            &:last-child{
+              border: 0;
+            }
+
           }
 
           .phone{
@@ -822,6 +850,74 @@ footer{
         color: @white;
         background: @purple;
         text-align: center;
+      }
+    }
+  }
+}
+
+//BOX
+
+.box{
+  .dk-bg;
+  .padding;
+  text-align: center;
+
+  h1{
+    .font-size(1.2em,1em);
+    color: @purple;
+  }
+
+  p{
+    .content-text;
+  }
+}
+
+//SINGLE PROJECT
+.single-projects{
+
+  .project-item{
+
+    .video-container{
+
+    }
+
+    .title{
+      padding: 1em 0;
+      margin: 0 0 .5em;
+      border-bottom: 1px solid @lt-purple;
+
+      h2{
+        margin: 0;
+        color: @lt-purple;
+        .source(400);
+        text-transform: uppercase;
+        .font-size(1.3em,.8em);
+      }
+    }
+
+    .info-container{
+
+      .desc{
+        .content-text;
+      }
+
+      &.w-logo{
+
+        .client-logo{
+          .inline();
+          width: 20%;
+          margin: .2em .2em 0 0;
+
+          img{
+            width: 100%;
+            max-width: 100%;
+          }
+        }
+
+        .desc{
+          .inline();
+          width: 77%;
+        }
       }
     }
   }

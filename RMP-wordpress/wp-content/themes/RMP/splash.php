@@ -74,10 +74,10 @@ Template Name: Splash Page
             <div class="hero-container">
                 <div class="hero">
                     <img src="<?php bloginfo("template_url"); ?>/images/rmp-logo.png" alt="Randy Murray Productions"/>
-                    <h1>Powerfull Storytelling For Positive Change</h1>
+                    <h1>Powerful Storytelling For Positive Change</h1>
                 </div>
                 <div class="nav">
-                    <h2>New Site Coming Winter 2013</h2>
+                    <h2>New Site Coming Soon</h2>
                     <div class="links">
                         <a href="#" class="contact">Contact</a>|
                         <a href="http://vimeo.com/randymurrayproductions" class="vimeo" target="blank">Vimeo</a>|

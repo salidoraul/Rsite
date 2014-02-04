@@ -45,7 +45,7 @@ function resize(w){
 
     }
 
-    if(w < 1025){ //////----PHONE/MINI/TABLET
+    if(w < 1024){ //////----PHONE/MINI/TABLET
 
 
     }
@@ -277,6 +277,33 @@ $(function(){
     window.body = $('body');
     window.win_width = $(window).width();
 
+    //CONDITIONIZR
+    conditionizr.config({
+        tests: {
+            'chrome': ['class'],
+            'chromium': ['class'],
+            'firefox': ['class'],
+            'ie6': ['class'],
+            'ie7': ['class'],
+            'ie8': ['class'],
+            'ie9': ['class'],
+            'ie10': ['class'],
+            'ie10touch': ['class'],
+            'ie11': ['class'],
+            'ios': ['class'],
+            'linux': ['class'],
+            'mac': ['class'],
+            'opera': ['class'],
+            'retina': ['class'],
+            'safari': ['class'],
+            'touch': ['class'],
+            'windows': ['class'],
+            'winPhone7': ['class'],
+            'winPhone75': ['class'],
+            'winPhone8': ['class']
+        }
+    });
+
     //NAV BTN
     $('header .nav-btn, .nav-cover').click(function(){
 
@@ -341,11 +368,12 @@ $(function(){
     });
 
     //AJAX PAGE LOADING /////////////
-    $('.nav-logo-link, .off-canvas-nav a, .home nav.home-nav a, header .header-logo').click(function(e){
+    $('.nav-logo-link, .off-canvas-nav a, .home nav.home-nav a, header .header-logo, a.btn-page-link').click(function(e){
 
         var html = $('html');
 
-        if (history && !html.hasClass('ie8') && !html.hasClass('ie7')) {
+        //AJAX IS ONLY FOR RECENT BROWSERS
+        if (history && !html.hasClass('ie8') && !html.hasClass('ie7') && !html.hasClass('ie6')) {
 
             //VARS
             var simple_url = $(this).attr('href'),
@@ -400,7 +428,7 @@ $(function(){
                         }else{
                             loadSpinner('ajaxy');
                         }
-                        $('#ajaxy .main').animate({left: '-120%'});
+                        $('#ajaxy .main').animate({left: '-120%'})
                     },500);
 
                 },
@@ -426,7 +454,7 @@ $(function(){
                         document.title = title;
                         $(window.body).removeClass(window.previous_page).addClass(page_class);
                         $('#ajaxy').attr('slug',page_class);
-                        ajaxy.html(html);
+                        ajaxy.hide().html(html);
                     },750);
 
                 },
@@ -436,7 +464,7 @@ $(function(){
                     $('*').unbind();
 
                     setTimeout(function(){
-//                        $('#ajaxy .main').animate({left: '0px'});
+                        $('#ajaxy').fadeIn();
                         $.getScript(template_url + '/js/scripts.js');
                     },900);
                 }
@@ -724,7 +752,7 @@ $(function(){
                                     complete: function(){
 
                                         //IF MOBILE
-                                        if(w < 1025){
+                                        if(w < 1024){
                                             //SCROLLTO
                                             setTimeout(function(){
                                                 var os = _this.offset().top;
@@ -749,7 +777,7 @@ $(function(){
 
             //ONLY FOR MOBILE
             var wi = $(window).width();
-            if( wi < 1025){
+            if( wi < 1024){
 
                 var _t = $(this),
                     mst = _t.attr('ajax-data'),
@@ -806,7 +834,7 @@ $(function(){
 
             var w1 = $(window).width();
             //MOBILE
-            if( w1 < 1025 ){
+            if( w1 < 1024 ){
 
                 accordion($(this));
 
@@ -824,7 +852,7 @@ $(function(){
 
             var w2 = $(window).width();
             //MOBILE
-            if( w2 < 1025 ){
+            if( w2 < 1024 ){
 
                 accordion($(this));
 

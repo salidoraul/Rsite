@@ -14,7 +14,7 @@
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/bigvideo.js"></script>
     <script type="text/javascript">
         //VIDEO BG /////////////////////////////////////////
-        if (!Modernizr.touch){
+        if ( !conditionizr.touch || !conditionizr.ie8 || !conditionizr.ie7 || !conditionizr.ie6 ){
 
             var BV = new $.BigVideo({useFlashForFirefox:false});
             BV.init();
