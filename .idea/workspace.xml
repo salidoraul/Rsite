@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15ca680c-cf76-4aec-bf8c-0221a4e7162c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/single-projects.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/contact.php" afterPath="$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/contact.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/footer.php" afterPath="$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/less/stylesheets/full.less" afterPath="$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/less/stylesheets/full.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/header.php" afterPath="$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/css/ie-fix.css" afterPath="$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/css/ie-fix.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/less/stylesheets/mini-tablet.less" afterPath="$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/less/stylesheets/mini-tablet.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/less/stylesheets/phone.less" afterPath="$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/less/stylesheets/phone.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/js/scripts.js" afterPath="$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/js/scripts.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/single.php" afterPath="$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/single.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RMP-wordpress/wp-content/themes/RMP/splash.php" afterPath="$PROJECT_DIR$/RMP-wordpress/wp-content/themes/RMP/splash.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/css/styles.css" afterPath="$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/css/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/less/styles.less" afterPath="$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/less/styles.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/less/stylesheets/tablet.less" afterPath="$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/less/stylesheets/tablet.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Rsite.iws" />
@@ -42,17 +29,8 @@
       <file leaf-file-name="project-tool.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/includes/project-tool.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="27" selection-start="1976" selection-end="1976" vertical-scroll-proportion="-6.25" vertical-offset="810" max-vertical-offset="1620">
-              <folding>
-                <marker date="1387746601000" expanded="true" signature="2205:3400" placeholder="..." />
-                <marker date="1387746601000" expanded="true" signature="2256:3373" placeholder="..." />
-                <marker date="1387746601000" expanded="true" signature="2314:2402" placeholder="..." />
-                <marker date="1387746601000" expanded="true" signature="2451:2541" placeholder="..." />
-                <marker date="1387746601000" expanded="true" signature="2640:3342" placeholder="..." />
-                <marker date="1387746601000" expanded="true" signature="2793:2914" placeholder="..." />
-                <marker date="1387746601000" expanded="true" signature="2969:3065" placeholder="..." />
-                <marker date="1387746601000" expanded="true" signature="3168:3264" placeholder="..." />
-              </folding>
+            <state line="64" column="27" selection-start="1976" selection-end="1976" vertical-scroll-proportion="0.0" vertical-offset="1024" max-vertical-offset="1728">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -60,7 +38,7 @@
       <file leaf-file-name="splash.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RMP-wordpress/wp-content/themes/RMP/splash.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="32" selection-start="2668" selection-end="2668" vertical-scroll-proportion="0.56545454" vertical-offset="829" max-vertical-offset="2505">
+            <state line="75" column="87" selection-start="2604" selection-end="2604" vertical-scroll-proportion="0.49921995" vertical-offset="880" max-vertical-offset="2672">
               <folding />
             </state>
           </provider>
@@ -69,7 +47,7 @@
       <file leaf-file-name="mini-tablet.less" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/less/stylesheets/mini-tablet.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="351" column="23" selection-start="3766" selection-end="3766" vertical-scroll-proportion="-9.166667" vertical-offset="5045" max-vertical-offset="8625">
+            <state line="351" column="23" selection-start="3766" selection-end="3766" vertical-scroll-proportion="0.0" vertical-offset="5616" max-vertical-offset="9200">
               <folding />
             </state>
           </provider>
@@ -78,7 +56,7 @@
       <file leaf-file-name="single-projects.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/single-projects.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="14" selection-start="1455" selection-end="1455" vertical-scroll-proportion="-18.583334" vertical-offset="184" max-vertical-offset="780">
+            <state line="42" column="14" selection-start="1455" selection-end="1455" vertical-scroll-proportion="0.0" vertical-offset="672" max-vertical-offset="832">
               <folding />
             </state>
           </provider>
@@ -87,7 +65,7 @@
       <file leaf-file-name="styles.less" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/less/styles.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="31" selection-start="272" selection-end="272" vertical-scroll-proportion="-3.9795918" vertical-offset="0" max-vertical-offset="450">
+            <state line="13" column="31" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0" vertical-offset="208" max-vertical-offset="480">
               <folding />
             </state>
           </provider>
@@ -96,7 +74,7 @@
       <file leaf-file-name="contact.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/contact.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="32" selection-start="3270" selection-end="3270" vertical-scroll-proportion="-16.0" vertical-offset="891" max-vertical-offset="1725">
+            <state line="88" column="32" selection-start="3270" selection-end="3270" vertical-scroll-proportion="0.0" vertical-offset="1408" max-vertical-offset="1888">
               <folding>
                 <marker date="1391305871000" expanded="true" signature="1946:2078" placeholder="..." />
                 <marker date="1391305871000" expanded="true" signature="1978:2078" placeholder="..." />
@@ -108,7 +86,7 @@
       <file leaf-file-name="what-we-do.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/what-we-do.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="18" selection-start="2458" selection-end="2458" vertical-scroll-proportion="-18.583334" vertical-offset="484" max-vertical-offset="1080">
+            <state line="65" column="18" selection-start="2458" selection-end="2458" vertical-scroll-proportion="0.0" vertical-offset="1040" max-vertical-offset="1200">
               <folding />
             </state>
           </provider>
@@ -117,7 +95,7 @@
       <file leaf-file-name="base.less" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/less/stylesheets/base.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="203" column="19" selection-start="3074" selection-end="3074" vertical-scroll-proportion="14.979591" vertical-offset="3779" max-vertical-offset="4575">
+            <state line="203" column="19" selection-start="3074" selection-end="3074" vertical-scroll-proportion="0.0" vertical-offset="3248" max-vertical-offset="4880">
               <folding />
             </state>
           </provider>
@@ -126,7 +104,7 @@
       <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="43" selection-start="2042" selection-end="2042" vertical-scroll-proportion="-7.5" vertical-offset="465" max-vertical-offset="2085">
+            <state line="43" column="43" selection-start="2042" selection-end="2042" vertical-scroll-proportion="0.0" vertical-offset="688" max-vertical-offset="2224">
               <folding />
             </state>
           </provider>
@@ -135,7 +113,7 @@
       <file leaf-file-name="footer.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="699" selection-end="699" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="645">
+            <state line="17" column="0" selection-start="699" selection-end="699" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="688">
               <folding />
             </state>
           </provider>
@@ -171,9 +149,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
     <option name="width" value="1280" />
-    <option name="height" value="774" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -547,6 +524,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -570,6 +548,23 @@
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="15ca680c-cf76-4aec-bf8c-0221a4e7162c" name="Default" comment="" />
@@ -579,29 +574,29 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1280" height="774" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1505848" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2003231" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18901454" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1615509" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19951534" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16639742" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934928" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1505848" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -621,6 +616,79 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/includes/project-tool.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="27" selection-start="1976" selection-end="1976" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1728">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RMP-wordpress/wp-content/themes/RMP/splash.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="34" selection-start="2395" selection-end="2395" vertical-scroll-proportion="0.0" vertical-offset="1136" max-vertical-offset="2672">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/less/stylesheets/mini-tablet.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="351" column="23" selection-start="3766" selection-end="3766" vertical-scroll-proportion="0.0" vertical-offset="5616" max-vertical-offset="9200">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/single-projects.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="14" selection-start="1455" selection-end="1455" vertical-scroll-proportion="0.0" vertical-offset="672" max-vertical-offset="832">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/less/styles.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="31" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0" vertical-offset="208" max-vertical-offset="480">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/contact.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="88" column="32" selection-start="3270" selection-end="3270" vertical-scroll-proportion="0.0" vertical-offset="1408" max-vertical-offset="1888">
+          <folding>
+            <marker date="1391305871000" expanded="true" signature="1946:2078" placeholder="..." />
+            <marker date="1391305871000" expanded="true" signature="1978:2078" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/what-we-do.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="18" selection-start="2458" selection-end="2458" vertical-scroll-proportion="0.0" vertical-offset="1040" max-vertical-offset="1200">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/less/stylesheets/base.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="203" column="19" selection-start="3074" selection-end="3074" vertical-scroll-proportion="0.0" vertical-offset="3248" max-vertical-offset="4880">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="43" selection-start="2042" selection-end="2042" vertical-scroll-proportion="0.0" vertical-offset="688" max-vertical-offset="2224">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="0" selection-start="699" selection-end="699" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="688">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/less/stylesheets/tablet.less">
       <provider selected="true" editor-type-id="text-editor">
         <state line="356" column="36" selection-start="3976" selection-end="3976" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8400">
@@ -644,90 +712,70 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/js/scripts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="396" column="46" selection-start="10769" selection-end="10769" vertical-scroll-proportion="0.0" vertical-offset="5505" max-vertical-offset="14265">
-          <folding />
-        </state>
+        <state line="396" column="46" selection-start="10769" selection-end="10769" vertical-scroll-proportion="0.0" vertical-offset="5505" max-vertical-offset="14265" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="699" selection-end="699" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="645">
+        <state line="17" column="0" selection-start="699" selection-end="699" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="688">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="43" selection-start="2042" selection-end="2042" vertical-scroll-proportion="-7.5" vertical-offset="465" max-vertical-offset="2085">
+        <state line="43" column="43" selection-start="2042" selection-end="2042" vertical-scroll-proportion="0.0" vertical-offset="688" max-vertical-offset="2224">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/less/ie-fix.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="633">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="633" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/less/styles.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="31" selection-start="272" selection-end="272" vertical-scroll-proportion="-3.9795918" vertical-offset="0" max-vertical-offset="450">
+        <state line="13" column="31" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0" vertical-offset="208" max-vertical-offset="480">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/less/stylesheets/base.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="203" column="19" selection-start="3074" selection-end="3074" vertical-scroll-proportion="14.979591" vertical-offset="3779" max-vertical-offset="4575">
+        <state line="203" column="19" selection-start="3074" selection-end="3074" vertical-scroll-proportion="0.0" vertical-offset="3248" max-vertical-offset="4880">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/single.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="2" selection-start="60" selection-end="60" vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="330">
-          <folding>
-            <marker date="1390972614000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1390972614000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
+        <state line="3" column="2" selection-start="60" selection-end="60" vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="330" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RMP-wordpress/wp-content/themes/RMP/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="1122" selection-end="1122" vertical-scroll-proportion="0.295302" vertical-offset="379" max-vertical-offset="3165">
-          <folding />
-        </state>
+        <state line="37" column="0" selection-start="1122" selection-end="1122" vertical-scroll-proportion="0.295302" vertical-offset="379" max-vertical-offset="3165" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/what-we-do.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="18" selection-start="2458" selection-end="2458" vertical-scroll-proportion="-18.583334" vertical-offset="484" max-vertical-offset="1080">
+        <state line="65" column="18" selection-start="2458" selection-end="2458" vertical-scroll-proportion="0.0" vertical-offset="1040" max-vertical-offset="1200">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/single-projects.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="14" selection-start="1455" selection-end="1455" vertical-scroll-proportion="-18.583334" vertical-offset="184" max-vertical-offset="780">
+        <state line="42" column="14" selection-start="1455" selection-end="1455" vertical-scroll-proportion="0.0" vertical-offset="672" max-vertical-offset="832">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/includes/project-tool.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="27" selection-start="1976" selection-end="1976" vertical-scroll-proportion="-6.25" vertical-offset="810" max-vertical-offset="1620">
-          <folding>
-            <marker date="1387746601000" expanded="true" signature="2205:3400" placeholder="..." />
-            <marker date="1387746601000" expanded="true" signature="2256:3373" placeholder="..." />
-            <marker date="1387746601000" expanded="true" signature="2314:2402" placeholder="..." />
-            <marker date="1387746601000" expanded="true" signature="2451:2541" placeholder="..." />
-            <marker date="1387746601000" expanded="true" signature="2640:3342" placeholder="..." />
-            <marker date="1387746601000" expanded="true" signature="2793:2914" placeholder="..." />
-            <marker date="1387746601000" expanded="true" signature="2969:3065" placeholder="..." />
-            <marker date="1387746601000" expanded="true" signature="3168:3264" placeholder="..." />
-          </folding>
+        <state line="64" column="27" selection-start="1976" selection-end="1976" vertical-scroll-proportion="0.0" vertical-offset="1024" max-vertical-offset="1728">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -740,7 +788,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/less/stylesheets/mini-tablet.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="351" column="23" selection-start="3766" selection-end="3766" vertical-scroll-proportion="-9.166667" vertical-offset="5045" max-vertical-offset="8625">
+        <state line="351" column="23" selection-start="3766" selection-end="3766" vertical-scroll-proportion="0.0" vertical-offset="5616" max-vertical-offset="9200">
           <folding />
         </state>
       </provider>
@@ -754,14 +802,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/js/scripts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="370" column="100" selection-start="9907" selection-end="9907" vertical-scroll-proportion="0.5564516" vertical-offset="5205" max-vertical-offset="14685">
-          <folding />
-        </state>
+        <state line="370" column="100" selection-start="9907" selection-end="9907" vertical-scroll-proportion="0.5564516" vertical-offset="5205" max-vertical-offset="14685" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/new/RMP-wordpress/wp-content/themes/RMP/contact.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="32" selection-start="3270" selection-end="3270" vertical-scroll-proportion="-16.0" vertical-offset="891" max-vertical-offset="1725">
+        <state line="88" column="32" selection-start="3270" selection-end="3270" vertical-scroll-proportion="0.0" vertical-offset="1408" max-vertical-offset="1888">
           <folding>
             <marker date="1391305871000" expanded="true" signature="1946:2078" placeholder="..." />
             <marker date="1391305871000" expanded="true" signature="1978:2078" placeholder="..." />
@@ -778,7 +824,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/RMP-wordpress/wp-content/themes/RMP/splash.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="32" selection-start="2668" selection-end="2668" vertical-scroll-proportion="0.56545454" vertical-offset="829" max-vertical-offset="2505">
+        <state line="75" column="87" selection-start="2604" selection-end="2604" vertical-scroll-proportion="0.49921995" vertical-offset="880" max-vertical-offset="2672">
           <folding />
         </state>
       </provider>
