@@ -12,7 +12,7 @@ get_header(); ?>
         <div class="hero-logo">
             <img src="<?php bloginfo("template_url"); ?>/images/rmp-logo.png" alt="Randy Murray Productions"/>
         </div>
-        <h1 class="hero-slogan">Powerfull Storytelling For Positive Change</h1>
+        <h1 class="hero-slogan">Powerful Storytelling For Positive Change</h1>
     </div>
 
     <nav class="home-nav">
@@ -31,7 +31,7 @@ get_header(); ?>
         );
 
         //GET MAIN MENU BY ID
-        $menu = wp_get_nav_menu_object(3,$args);
+        $menu = wp_get_nav_menu_object(4,$args);
         $menu_items = wp_get_nav_menu_items($menu->term_id);
 
         //CONSTRUCT MENU LIST
