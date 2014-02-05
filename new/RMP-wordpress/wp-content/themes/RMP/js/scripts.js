@@ -347,25 +347,25 @@ $(function(){
     $('.menu-main-container').perfectScrollbar();
 
     //LOOP BTN
-    $('header .loop-btn').on('click',function(){
-        var ajaxy = $('#ajaxy');
-        if( ajaxy.hasClass('faded') ){
-            ajaxy.fadeIn().removeClass('faded');
-            $(this).removeClass('active');
-
-            if( $('#big-video-wrap').hasClass('faded') ){
-                $('#big-video-wrap').fadeOut();
-            }
-
-        }else{
-            ajaxy.fadeOut().addClass('faded');
-            $(this).addClass('active');
-
-            if( $('#big-video-wrap').hasClass('faded') ){
-                $('#big-video-wrap').fadeIn();
-            }
-        }
-    });
+//    $('header .loop-btn').on('click',function(){
+//        var ajaxy = $('#ajaxy');
+//        if( ajaxy.hasClass('faded') ){
+//            ajaxy.fadeIn().removeClass('faded');
+//            $(this).removeClass('active');
+//
+//            if( $('#big-video-wrap').hasClass('faded') ){
+//                $('#big-video-wrap').fadeOut();
+//            }
+//
+//        }else{
+//            ajaxy.fadeOut().addClass('faded');
+//            $(this).addClass('active');
+//
+//            if( $('#big-video-wrap').hasClass('faded') ){
+//                $('#big-video-wrap').fadeIn();
+//            }
+//        }
+//    });
 
     //AJAX PAGE LOADING /////////////
     $('.nav-logo-link, .off-canvas-nav a, .home nav.home-nav a, header .header-logo, a.btn-page-link').click(function(e){
@@ -700,7 +700,7 @@ $(function(){
                         //HEIGHT ON IMG LOAD
                         var thumb_obj = these_thumbs.find('img');
                         thumb_obj.on('load',function(){
-                            var height = these_thumbs.height() + 10;
+                            var height = these_thumbs.height() + 15;
                             $('#thumbs-container-' + service_type).animate({height: height}).perfectScrollbar();
 
                             //OPEN FIRST PROJECT ON DESKTOP

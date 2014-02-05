@@ -84,7 +84,7 @@ html,body{
 header{
 
   .header-wrapper{
-    .wrapper;
+    width: 100%;
 
     .left-header{
 
@@ -175,7 +175,7 @@ header{
   .header-contact-links{
 
     .contact-links-wrapper{
-      .wrapper;
+      width: 100%;
 
       .contact-tip{
 
@@ -212,19 +212,24 @@ footer{
   }
 
   .hero-container{
+    max-width: none;
+    width: 30em;
 
     .hero-logo{
 
     }
 
     .hero-slogan{
-
+      .font-size(1.6em,1.4em);
+      padding: 0 3em 1em;
     }
   }
 
   .home-nav{
+    padding: 3em 0 0;
 
     a{
+      .font-size(2em,1em);
       border-bottom: 3px solid transparent;
       .lh-transition(all .3s ease);
 
@@ -253,7 +258,7 @@ footer{
 
     .tabs-container{
       position: relative;
-      padding: 0 50% 0 0;
+      padding: 0 51% 0 0;
 
       .main-title{
 
@@ -314,6 +319,7 @@ footer{
                 .thumbs-content{
 
                   .thumb-item{
+                    width: 7em;
 
                     img{
 
