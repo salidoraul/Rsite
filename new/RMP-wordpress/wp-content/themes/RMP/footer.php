@@ -1,11 +1,5 @@
             </section><!-- AJAXY -->
 
-            <!-- FOOTER -->
-            <footer>
-                <div class="footer-container">
-                    <?php wp_nav_menu( array( 'menu' => 'Footer' ) ); ?>
-                </div>
-            </footer>
 </div><!-- OUTER-CONTAINER -->
 	<?php wp_footer(); ?>
 
@@ -16,12 +10,26 @@
         //VIDEO BG /////////////////////////////////////////
         if ( !conditionizr.touch || !conditionizr.ie8 || !conditionizr.ie7 || !conditionizr.ie6 ){
 
+            <?php
+            //GET FIELDS FOR VIDEO AND BG IMG
+            $video_mp4 = get_pods_field('company_information','background_video_mp4');
+            $video_ogv = get_pods_field('company_information','background_video_ogv');
+            $bg_images = get_pods_field('company_information','background_images');
+            $rand_bg_img = $bg_images[array_rand($bg_images, 1)];
+
+            ?>
+
             var BV = new $.BigVideo({useFlashForFirefox:false});
             BV.init();
-            BV.show('http://www.randymurrayproductions.com/new/RMP-wordpress/wp-content/themes/RMP/video/rmp-video.mp4',{
+            BV.show('<?= $video_mp4['guid']; ?>',{
                 ambient: true,
-                altSource: 'http://www.randymurrayproductions.com/new/RMP-wordpress/wp-content/themes/RMP/video/rmp-video.ogv'
+                altSource: '<?= $video_ogv['guid']; ?>'
             });
+        } else {
+            var BV = new $.BigVideo({useFlashForFirefox:false});
+            BV.init();
+            BV.show('<?= $rand_bg_img['guid']; ?>');
+
         }
     </script>
 
