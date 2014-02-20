@@ -34,7 +34,7 @@ get_header(); ?>
                         <h4 class="panel-title">
                             <a class="accordion-toggle collapsed clearfix <?= $panel_slug ?> with-window" data-toggle="collapse" data-parent="#services" href="#<?= $panel_slug ?>" ajax-data="<?= $panel_slug ?>">
                                 <span class="title"><?= $title ?></span>
-                                <span class="glyphicon glyphicon-chevron-up"></span>
+                                <img class="arrow" src="<?php bloginfo('template_url'); ?>/images/arrow.png">
                             </a>
                         </h4>
                     </div>

@@ -93,9 +93,6 @@ if($autoP == 0){
                         </div>
                         <div class="menu-title">Menu</div>
                     </div>
-                    <div class="loop-btn">
-                        <span>Loop</span>
-                    </div>
                 </div>
                 <!--RIGHT-->
                 <div class="right-header">
