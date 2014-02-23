@@ -37,7 +37,7 @@ if($autoP == 0){
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/ie-fix.css" />
     <script src="<?php bloginfo('template_url'); ?>/js/html5.js"></script>
     <![endif]-->
-    
+
     <!--CONDITIONIZR-->
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/conditionizr.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/js/detects/chrome.js"></script>

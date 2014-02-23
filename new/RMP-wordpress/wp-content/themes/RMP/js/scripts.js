@@ -516,6 +516,13 @@ $(function(){
 
     }
 
+    //WHAT WE DO GREY BG-------->
+    if(window.body.hasClass('what-we-do')){
+        $('html').addClass('grey');
+    }else{
+        $('html').removeClass('grey');
+    }
+
     //WHAT WE DO & WHO WE ARE-------->
     if(window.body.hasClass('what-we-do') || window.body.hasClass('who-we-are')){
 
@@ -575,8 +582,6 @@ $(function(){
                     rw.fadeOut();
                     setTimeout(function(){
                         if( _this.hasClass('collapsed') ){
-
-                            //WHY IS THE WINDOW NOT GOING AWAY???
 
                             var open_panel_id = $('.panel-collapse.in').attr('id'),
                                 panel_id = _this.attr('ajax-data'),

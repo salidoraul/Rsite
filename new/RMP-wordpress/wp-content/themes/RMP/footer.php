@@ -3,12 +3,19 @@
 </div><!-- OUTER-CONTAINER -->
 	<?php wp_footer(); ?>
 
-    <!--// BIG VIDEO ////////////-->
+    <!--// SCRIPTS ////////////-->
     <script src="//vjs.zencdn.net/4.2/video.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/bigvideo.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery_cookie.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/bootstrap.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/spin.min.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/perfect-scrollbar-0.4.5.with-mousewheel.min.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/history.js"></script>
+
+    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/scripts.js"></script>
     <script type="text/javascript">
         //VIDEO BG /////////////////////////////////////////
-        if ( !conditionizr.touch || !conditionizr.ie8 || !conditionizr.ie7 || !conditionizr.ie6 ){
+        if ( !conditionizr.touch ){
 
             <?php
             //GET FIELDS FOR VIDEO AND BG IMG
@@ -21,26 +28,24 @@
 
             var BV = new $.BigVideo({useFlashForFirefox:false});
             BV.init();
-            BV.show('<?= $video_mp4['guid']; ?>',{
-                ambient: true,
-                altSource: '<?= $video_ogv['guid']; ?>'
-            });
-        } else {
-            var BV = new $.BigVideo({useFlashForFirefox:false});
-            BV.init();
-            BV.show('<?= $rand_bg_img['guid']; ?>');
+
+            //ONLY FOR CURRENT BROWSERS
+            if( !conditionizr.ie8 || !conditionizr.ie7 ){
+
+                BV.show('<?= $video_mp4['guid']; ?>',{
+                    ambient: true,
+                    altSource: '<?= $video_ogv['guid']; ?>'
+                });
+
+            } else {
+            //FOR DEPRECATED BROWSERS
+
+                BV.show('<?= $rand_bg_img['guid']; ?>');
+
+            }
 
         }
     </script>
-
-    <!--// SCRIPTS ////////////-->
-    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery_cookie.js"></script>
-    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/bootstrap.js"></script>
-    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/spin.min.js"></script>
-    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/perfect-scrollbar-0.4.5.with-mousewheel.min.js"></script>
-    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/history.js"></script>
-
-    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/scripts.js"></script>
 
 </body>
 </html>
