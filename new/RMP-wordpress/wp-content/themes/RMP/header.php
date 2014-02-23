@@ -26,6 +26,7 @@ if($autoP == 0){
     <!--// STYLESHEETS ////////////-->
     <link href="//vjs.zencdn.net/4.2/video-js.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/dashicons.css" />
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/bigvideo.css" />
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/perfect-scrollbar-0.4.5.min.css" />
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/styles.css" />
@@ -96,6 +97,22 @@ if($autoP == 0){
                 </div>
                 <!--RIGHT-->
                 <div class="right-header">
+                    <div class="header-contact social">
+                        <?php
+                        $twitter = get_option('company_information_twitter');
+                        if($twitter){
+                        ?>
+                        <a href="<?= $twitter ?>" target="_blank" class="dashicons dashicons-twitter"></a>
+                        <?php
+                        }
+                        $facebook = get_option('company_information_facebook');
+                        if($facebook){
+                        ?>
+                        <a href="<?= $facebook ?>" target="_blank" class="dashicons dashicons-facebook"></a>
+                        <?php
+                        }
+                        ?>
+                    </div>
                     <?php
                         $contact_email = get_option('company_information_contact_email');
                         $contact_phone = get_option('company_information_contact_phone');
