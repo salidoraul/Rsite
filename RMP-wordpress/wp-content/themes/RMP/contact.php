@@ -34,10 +34,17 @@ get_header(); ?>
                 <div class="info-item">
                     <h3><?= $title ?></h3>
                     <div class="info-wrapper">
-                        <div class="info"><?= $info ?></div>
-                        <a class="phone phone-link" href="tel:<?= $phone ?>"><?= $phone ?></a>
-                        | M <a class="mobile phone-link" href="<?= $mobile ?>"><?= $mobile ?></a>
-                        <a class="email" href="mailto:<?= $email ?>"><?= $email ?></a>
+                        <?php
+                            if($info){
+                                echo('<div class="info">'.$info.'</div>');
+                            } if($phone){
+                                echo('<a class="phone phone-link" href="tel:'.$phone.'">'.$phone.'</a>');
+                            } if($mobile){
+                                echo('<a class="mobile phone-link" href="'.$mobile.'"> M '.$mobile.'</a>');
+                            } if($email){
+                                echo('<a class="email" href="mailto:'.$email.'">'.$email.'</a>');
+                            }
+                        ?>
                     </div>
                 </div>
 
@@ -77,8 +84,9 @@ get_header(); ?>
                     <div class="title"><?= $title ?></div>
                     <div class="address-container">
                         <div class="address"><?= $address ?></div>
-                        <a class="phone phone-link" href="tel:<?= $phone ?>">Office: <?= $phone ?></a>
-                        <?php if($fax){ ?>
+                        <?php if($phone){ ?>
+                            <a class="phone phone-link" href="tel:<?= $phone ?>">Office: <?= $phone ?></a>
+                        <?php } if($fax){ ?>
                             <a class="phone phone-link" href="tel:<?= $fax ?>">Fax: <?= $fax ?></a>
                         <?php } ?>
                         <a class="email" href="mailto:<?= $email ?>"><?= $email ?></a>
@@ -92,7 +100,6 @@ get_header(); ?>
         </div>
 
         <!-- GOOGLE MAP -->
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2oIP9_kISo93_2UVT4QfJGzEFOE-cmyM&sensor=false"></script>
         <script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/infobubble-compiled.js"></script>
         <div class="map-container">
             <div class="map-slider">

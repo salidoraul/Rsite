@@ -32,9 +32,9 @@ get_header(); ?>
                 <div class="panel">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a class="accordion-toggle collapsed clearfix <?= $panel_slug ?>" data-toggle="collapse" data-parent="#services" href="#<?= $panel_slug ?>" ajax-data="<?= $panel_slug ?>">
+                            <a class="accordion-toggle collapsed clearfix <?= $panel_slug ?> with-window" data-toggle="collapse" data-parent="#services" href="#<?= $panel_slug ?>" ajax-data="<?= $panel_slug ?>">
                                 <span class="title"><?= $title ?></span>
-                                <span class="glyphicon glyphicon-chevron-up"></span>
+                                <img class="arrow" src="<?php bloginfo('template_url'); ?>/images/arrow.png">
                             </a>
                         </h4>
                     </div>
@@ -46,7 +46,7 @@ get_header(); ?>
                                 <div id="thumbs-container-<?= $panel_slug ?>" class="thumbs-container">
                                     <div class="thumbs-content"></div>
                                 </div>
-                                <div id="details-container-<?= $panel_slug ?>" class="project-details">
+                                <div id="details-container-<?= $panel_slug ?>" class="project-details right-window">
                                     <div class="blur-container"></div>
                                 </div>
                             </div>

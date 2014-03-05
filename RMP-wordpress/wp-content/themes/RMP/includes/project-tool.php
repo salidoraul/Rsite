@@ -19,7 +19,8 @@ if ($auth == 'y') :
 
     //ADD SERVICE TO PRODUCTS OBJECTS
     foreach( $posts as $post ){
-        $service = get_pods_field('projects','service')['post_name'];
+        $service_array = get_pods_field('projects','service');
+        $service = $service_array['post_name'];
         $post->service = $service;
     }
 
@@ -59,7 +60,7 @@ RSA;
                 $title = get_the_title();
 
                 $vimeo_id = get_pods_field('projects','vimeo_id');
-                $vimeo_player = '<iframe src="//player.vimeo.com/video/'.$vimeo_id.'?title=0&amp;byline=0&amp;portrait=0&amp;color=7079CE" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+                $vimeo_player = '<iframe src="http://player.vimeo.com/video/'.$vimeo_id.'?title=0&amp;byline=0&amp;portrait=0&amp;color=9aa5e8" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
 
                 $desc = get_pods_field('projects','description');
 
