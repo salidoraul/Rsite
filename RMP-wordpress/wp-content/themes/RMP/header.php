@@ -24,6 +24,7 @@ if($autoP == 0){
     <link rel="icon" href="<?php bloginfo('template_url') ?>/images/favicon.gif" />
 
     <!--// STYLESHEETS ////////////-->
+    <style type="text/css">.video-js{visibility: hidden;}</style>
     <link href="//vjs.zencdn.net/4.2/video-js.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/dashicons.css" />

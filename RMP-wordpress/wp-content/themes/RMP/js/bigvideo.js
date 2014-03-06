@@ -66,7 +66,7 @@
 					player
 						.width(windowH*mediaAspect)
 						.height(windowH);
-					if (settings.shrinkable == false) {
+					if (!settings.shrinkable) {
 						$(vidEl)
 							.css('top',0)
 							.css('left',-(windowH*mediaAspect-windowW)/2)
@@ -76,8 +76,10 @@
 							.css('top',-(windowW/mediaAspect-windowH)/2)
 							.css('left',0)
 							.css('height',windowW/mediaAspect);
-					};
-					$(vidEl+'_html5_api').css('width',windowH*mediaAspect);
+					}
+					$(vidEl+'_html5_api')
+						.css('width',windowH*mediaAspect)
+						.css('height',windowH);
 					$(vidEl+'_flash_api')
 						.css('width',windowH*mediaAspect)
 						.css('height',windowH);
@@ -101,7 +103,9 @@
 						.css('top',-(windowW/mediaAspect-windowH)/2)
 						.css('left',0)
 						.css('height',windowW/mediaAspect);
-					$(vidEl+'_html5_api').css('width',$(vidEl+'_html5_api').parent().width()+"px");
+					$(vidEl+'_html5_api')
+						.css('width',$(vidEl+'_html5_api').parent().width()+"px")
+                        .css('height','auto');
 					$(vidEl+'_flash_api')
 						.css('width',windowW)
 						.css('height',windowW/mediaAspect);
@@ -331,14 +335,14 @@
 						source = options.altSource;
 					}
 					playVideo(source);
-					options.onShown && options.onShown();
+					if (options.onShown) options.onShown();
 					isQueued = false;
 				}
 			} else {
 				playlist = source;
 				currMediaIndex = 0;
 				playVideo(playlist[currMediaIndex]);
-				options.onShown && options.onShown();
+				if (options.onShown) options.onShown();
 				isQueued = true;
 			}
 		};

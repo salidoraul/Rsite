@@ -6,8 +6,15 @@
     //GET FIELDS FOR VIDEO AND BG IMG
     $video_mp4 = get_pods_field('company_information','background_video_mp4');
     $video_ogv = get_pods_field('company_information','background_video_ogv');
+
     $bg_images = get_pods_field('company_information','background_images');
-//    $rand_bg_img = $bg_images[array_rand($bg_images, 1)];
+
+    //IF IT RETURNS AN ARRAY PROCEED
+    if( is_array($bg_images) ){
+        $rand = array_rand($bg_images, 1);
+        $img_obj = 'BV.show("'.$bg_images[$rand]['guid'].'");';
+    };
+
 
     wp_footer(); ?>
 
@@ -23,55 +30,73 @@
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/scripts.js"></script>
     <script type="text/javascript">
 
-        //CONDITIONIZR
-        conditionizr.config({
-            tests: {
-                'chrome': ['class'],
-                'chromium': ['class'],
-                'firefox': ['class'],
-                'ie6': ['class'],
-                'ie7': ['class'],
-                'ie8': ['class'],
-                'ie9': ['class'],
-                'ie10': ['class'],
-                'ie10touch': ['class'],
-                'ie11': ['class'],
-                'ios': ['class'],
-                'linux': ['class'],
-                'mac': ['class'],
-                'opera': ['class'],
-                'retina': ['class'],
-                'safari': ['class'],
-                'touch': ['class'],
-                'windows': ['class'],
-                'winPhone7': ['class'],
-                'winPhone75': ['class'],
-                'winPhone8': ['class']
-            }
+        $(function(){
+            //CONDITIONIZR
+            conditionizr.config({
+                tests: {
+                    'chrome': ['class'],
+                    'chromium': ['class'],
+                    'firefox': ['class'],
+                    'ie6': ['class'],
+                    'ie7': ['class'],
+                    'ie8': ['class'],
+                    'ie9': ['class'],
+                    'ie10': ['class'],
+                    'ie10touch': ['class'],
+                    'ie11': ['class'],
+                    'ios': ['class'],
+                    'linux': ['class'],
+                    'mac': ['class'],
+                    'opera': ['class'],
+                    'retina': ['class'],
+                    'safari': ['class'],
+                    'touch': ['class'],
+                    'windows': ['class'],
+                    'winPhone7': ['class'],
+                    'winPhone75': ['class'],
+                    'winPhone8': ['class']
+                }
+            });
         });
 
         //VIDEO BG /////////////////////////////////////////
-        if ( !conditionizr.touch ){
+        $(window).on('load',function(){
 
-            var BV = new $.BigVideo({useFlashForFirefox:false});
-            BV.init();
+            if ( !conditionizr.touch ){
 
-            //ONLY FOR CURRENT BROWSERS
-            if( !conditionizr.ie8 || !conditionizr.ie7 ){
+                //INITIALIZE VIDEO
+                var BV = new $.BigVideo({useFlashForFirefox:false});
+                BV.init();
 
-                BV.show('<?= $video_mp4['guid']; ?>',{
-                    ambient: true,
-                    altSource: '<?= $video_ogv['guid']; ?>'
-                });
+                //SHOW VIDEO ONLY ON CURRENT BROWSERS
+                if( !conditionizr.ie8 || !conditionizr.ie7 ){
 
-            } else {
-            //FOR DEPRECATED BROWSERS
+                    //SHOW VIDEO WHEN OBJECT IS READY
+                    videojs("big-video-vid").ready(function(){
 
-<!--                BV.show('--><?//= $rand_bg_img['guid']; ?><!--');-->
+                        BV.show('<?= $video_mp4['guid']; ?>',{
+                            ambient: true,
+                            altSource: '<?= $video_ogv['guid']; ?>'
+                        });
+
+                    });
+
+                } else {
+                //FOR DEPRECATED BROWSERS
+
+                    <?= $img_obj ?>
+
+                }
+
+                //VIDEO IS VISIBLE
+                setTimeout(function(){
+                    $('.video-js').css('visibility','visible');
+                },500);
 
             }
 
-        }
+        });
+
     </script>
 
 </body>
