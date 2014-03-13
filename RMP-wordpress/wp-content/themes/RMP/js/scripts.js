@@ -679,7 +679,7 @@ $(function(){
                         var thumb_obj = these_thumbs.find('img');
                         thumb_obj.on('load',function(){
                             var height = these_thumbs.height() + 15;
-                            $('#thumbs-container-' + service_type).animate({height: height}).perfectScrollbar();
+                            $('#thumbs-container-' + service_type).animate({height: height},'fast').perfectScrollbar();
 
                             //OPEN FIRST PROJECT ON DESKTOP
                             if( open === true ){

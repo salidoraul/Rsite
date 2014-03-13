@@ -72,14 +72,11 @@
                 if( !conditionizr.ie8 || !conditionizr.ie7 ){
 
                     //SHOW VIDEO WHEN OBJECT IS READY
-                    videojs("big-video-vid").ready(function(){
-
-                        BV.show('<?= $video_mp4['guid']; ?>',{
-                            ambient: true,
-                            altSource: '<?= $video_ogv['guid']; ?>'
-                        });
-
+                    BV.show('<?= $video_mp4['guid']; ?>',{
+                        ambient: true,
+                        altSource: '<?= $video_ogv['guid']; ?>'
                     });
+
 
                 } else {
                 //FOR DEPRECATED BROWSERS
