@@ -88,6 +88,14 @@
 
                 }
 
+                //HIDE BG VIDEO ON CONTACT
+                if(window.body.hasClass('contact')){
+
+                    if( $(window).width() > 1023 ){
+                        $('#big-video-wrap').fadeOut().addClass('faded');
+                    }
+                }
+
                 //VIDEO IS VISIBLE
                 setTimeout(function(){
                     $('.video-js').css('visibility','visible');

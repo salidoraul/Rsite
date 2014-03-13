@@ -389,7 +389,7 @@ $(function(){
                     //FADE OUTER CONT & AJAXY
                     if( $('#ajaxy').hasClass('faded') ){
                         $('#ajaxy').show().removeClass('faded');
-                        $('header .loop-btn').removeClass('active');
+//                        $('header .loop-btn').removeClass('active');
                     }
                     $('.outer-container').fadeIn();
 
@@ -879,7 +879,9 @@ $(function(){
     if(window.body.hasClass('contact')){
 
         //FADE BG VIDEO
-        $('#big-video-wrap').fadeOut().addClass('faded');
+        if( $(window).width() > 1023 ){
+            $('#big-video-wrap').fadeOut().addClass('faded');
+        }
 
         //SERVE MAPS BASED ON LOCATIONS
         $('.location-item').click(function(){
@@ -914,7 +916,6 @@ $(function(){
 
         }else{
 
-            console.log('already loaded');
             initialize_map_phx();
 
         }
